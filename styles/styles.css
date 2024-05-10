@@ -18,6 +18,100 @@ body{
     display: flex;
 }
 
+.window-welcome-container{
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #ffffff42;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window-welcome-container .welcome-size{
+    width: 800px;
+    height: 400px;
+    background-color: #EEEDED;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+}
+
+.window-welcome-container .welcome-size .f-column{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.window-welcome-container .welcome-size .f-column h2{
+    font-size: 30px;
+    font-family: InterExtraBold;
+}
+
+.window-welcome-container .welcome-size .f-column p{
+    font-size: 16px;
+    font-family: InterMedium;
+    color: #777777;
+    width: 350px;
+    margin: 5px 0px;
+}
+
+.window-welcome-container .welcome-size .f-column input{
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 3px solid #FFF;
+}
+
+.window-welcome-container .welcome-size .f-column input:hover{
+    border-bottom: 3px solid #0774ab62;
+}
+
+.window-welcome-container .welcome-size .f-column input::placeholder{
+    font-family: InterMedium;
+    font-size: 13;
+    color: #BBBBBB;
+}
+
+.window-welcome-container .welcome-size .f-column input:focus{
+border-bottom: 3px solid #1e8bc2;
+}
+
+.window-welcome-container .welcome-size .f-column button{
+    background-color: #0775AB;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-family: InterExtraBold;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.window-welcome-container .welcome-size .f-column button:hover{
+    background-color: #1e8bc2;
+    transition: .2s;
+}
+
+.window-welcome-container .welcome-size .s-column{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
 /* Header */
 header {
     width: 320px;
@@ -148,7 +242,6 @@ main {
     padding: 30px 40px 40px 40px;
     display: flex;
     flex-direction: column;
-    border: 1px solid aqua;
 }
 
 main .line-decoration{
