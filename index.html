@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <div class="window-welcome-container">
+    <div class="window-welcome-container" id="windowContainer" >
         <div class="welcome-size">
             <div class="f-column">
                 <div>
@@ -22,7 +22,8 @@
                     <p> Para uma experiência completa por favor
                         digite o seu nome: </p>
                     <div>
-                        <input type="text" class="input-name" name="" id="" placeholder="Nome:"> <button> Continuar </button>
+                        <input type="text" class="input-name" name="" id="inputName" placeholder="Nome:" autocomplete="off"> 
+                        <button onclick="continuar()" id="btnContinue"> Continuar </button>
                     </div>
                 </div>
             </div>
@@ -82,7 +83,7 @@
                     </div>
                 </div>
                 <div class="s-column">
-                        <p class="name-profile"> Erik </p>
+                        <p class="name-profile" id="campoNameUsuario"> </p>
                         <p class="local">Conta Local</p>
                 </div>
             </div>
@@ -145,11 +146,13 @@
 
 
 
+    <script src="./js/script.js"></script>
+
     <main>
         <div class="info-size-container">
             <div class="f-column">
             <h2> Minha Lista </h2>
-            <p class="date"> Sexta-feira, 19 de abril de 2024</p>    
+            <p class="date" id="data"> EM BREVE: DIA ATUAL </p>    
             </div>
             <div class="s-column">
                 <div class="button-size-gg">
@@ -193,8 +196,8 @@
         <div class="line-decoration"></div>
 
         <div class="input-container">
-            <input type="text" name="" class="input-txt" id="" placeholder="Olá Erik! O que vamos fazer hoje?">
-            <button class="enviar"> 
+            <input type="text" name="" class="input-txt" id="inputTaskTxt" placeholder="Olá Erik! O que vamos fazer hoje?" autocomplete="off">
+            <button class="enviar" onclick="adicionar()" id="btnAdd"> 
                 <svg class="icon-btn" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.6378 34.9922V0.588776H21.4432V34.9922H13.6378ZM0.338778 21.6932V13.8878H34.7422V21.6932H0.338778Z" fill="white"/>
                     </svg>
@@ -205,57 +208,9 @@
             
         </div>
 
-        <div class="list-task-size">
-
-            <div class="task-container-content">
-
-                <div class="task-line-decoration"></div>
-
-                <div class="task-container-size">
-                    <div class="f-column">
-                        <i class="bi bi-circle-fill"></i>
-                    </div>
-                    <div class="s-column">
-                        <p class="task"> Ir para a faculdade. </p>
-                        <p class="time-task"> 12:03h </p>
-                    </div>
-                    <div class="t-column">
-                        <i class="bi bi-trash-fill"></i>
-                            <div class="info-trash">
-                            <p>Deletar</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="task-container-content">
-                <div class="task-line-decoration"></div>
-                <div class="task-container-size check">
-                    <div class="f-column">
-                        <i class="bi bi-check-circle-fill"></i>
-                    </div>
-                    <div class="s-column">
-                        <p class="task"> Ir para a faculdade. </p>
-                        <p class="time-task"> Realizado àsh 15:54h </p>
-                    </div>
-                    <div class="t-column">
-                        <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_99_2455)">
-                            <path d="M6.25 2.5C5.58696 2.5 4.95107 2.76339 4.48223 3.23223C4.01339 3.70107 3.75 4.33696 3.75 5V7.5C3.75 8.16304 4.01339 8.79893 4.48223 9.26777C4.95107 9.73661 5.58696 10 6.25 10H7.5V32.5C7.5 33.8261 8.02678 35.0979 8.96447 36.0355C9.90215 36.9732 11.1739 37.5 12.5 37.5H27.5C28.8261 37.5 30.0979 36.9732 31.0355 36.0355C31.9732 35.0979 32.5 33.8261 32.5 32.5V10H33.75C34.413 10 35.0489 9.73661 35.5178 9.26777C35.9866 8.79893 36.25 8.16304 36.25 7.5V5C36.25 4.33696 35.9866 3.70107 35.5178 3.23223C35.0489 2.76339 34.413 2.5 33.75 2.5H25C25 1.83696 24.7366 1.20107 24.2678 0.732233C23.7989 0.263392 23.163 0 22.5 0L17.5 0C16.837 0 16.2011 0.263392 15.7322 0.732233C15.2634 1.20107 15 1.83696 15 2.5H6.25ZM13.75 12.5C14.0815 12.5 14.3995 12.6317 14.6339 12.8661C14.8683 13.1005 15 13.4185 15 13.75V31.25C15 31.5815 14.8683 31.8995 14.6339 32.1339C14.3995 32.3683 14.0815 32.5 13.75 32.5C13.4185 32.5 13.1005 32.3683 12.8661 32.1339C12.6317 31.8995 12.5 31.5815 12.5 31.25V13.75C12.5 13.4185 12.6317 13.1005 12.8661 12.8661C13.1005 12.6317 13.4185 12.5 13.75 12.5ZM20 12.5C20.3315 12.5 20.6495 12.6317 20.8839 12.8661C21.1183 13.1005 21.25 13.4185 21.25 13.75V31.25C21.25 31.5815 21.1183 31.8995 20.8839 32.1339C20.6495 32.3683 20.3315 32.5 20 32.5C19.6685 32.5 19.3505 32.3683 19.1161 32.1339C18.8817 31.8995 18.75 31.5815 18.75 31.25V13.75C18.75 13.4185 18.8817 13.1005 19.1161 12.8661C19.3505 12.6317 19.6685 12.5 20 12.5ZM27.5 13.75V31.25C27.5 31.5815 27.3683 31.8995 27.1339 32.1339C26.8995 32.3683 26.5815 32.5 26.25 32.5C25.9185 32.5 25.6005 32.3683 25.3661 32.1339C25.1317 31.8995 25 31.5815 25 31.25V13.75C25 13.4185 25.1317 13.1005 25.3661 12.8661C25.6005 12.6317 25.9185 12.5 26.25 12.5C26.5815 12.5 26.8995 12.6317 27.1339 12.8661C27.3683 13.1005 27.5 13.4185 27.5 13.75Z" fill="white"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0_99_2455">
-                            <rect width="40" height="40" fill="white"/>
-                            </clipPath>
-                            </defs>
-                            </svg>
-                            <div class="info-trash">
-                            <p>Deletar</p>
-                        </div>
-                    </div>
-                </div>
-                    
-            </div>    
+        <div class="list-task-size" id="areaTask">
+            
+            
             
         </div>
     </main>   

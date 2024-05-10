@@ -28,6 +28,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: visible;
 }
 
 .window-welcome-container .welcome-size{
@@ -67,6 +68,9 @@ body{
     outline: none;
     cursor: pointer;
     border-bottom: 3px solid #FFF;
+    font-family: InterMedium;
+    font-size: 13;
+    color: #8f8f8f;
 }
 
 .window-welcome-container .welcome-size .f-column input:hover{
@@ -178,7 +182,7 @@ header .perfil-info-container .name-profile{
 }
 
 header .perfil-info-container .local{
-    font-size: 15px;
+    font-size: 13px;
     color: #929292;
     font-family: InterMedium;
 }
@@ -377,6 +381,7 @@ main .task-container-size{
     border-radius: 5px;
     display: flex;
     cursor: pointer;
+    z-index: 8;
 }
 
 main .task-container-size .f-column{
@@ -390,6 +395,7 @@ main .task-container-size .f-column{
 main i{
     font-size: 20px;
     color: #D9D9D9;
+    margin-left: 5px;
 }
 
 main .task-container-size .s-column{
@@ -399,6 +405,7 @@ main .task-container-size .s-column{
     flex-direction: column;
     justify-content: center;
     gap: 5px;
+    padding-left: 5px;
 }
 
 main .time-task{
@@ -417,7 +424,7 @@ main p.task{
 }
 
 main .task-container-size .t-column{
-    width: 80px;
+    width: 90px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -425,8 +432,15 @@ main .task-container-size .t-column{
     position: relative;
 }
 
+main .task-container-size .t-column button{
+    border: none;
+    background-color: #ffffff00;
+    cursor: pointer;
+}
+
 main .task-container-size .t-column i{
     font-size: 40px;
+    margin-right: 5px;
     color: #FFF;
 }
 
@@ -443,11 +457,13 @@ main .task-container-size .t-column .info-trash{
     font-family: InterSemiBold;
     position: absolute;
     top: 40px;
+    right: 3px;
     visibility: hidden;
+    z-index: 3;
 }
 
 main .task-container-size .t-column:hover .info-trash{
-    top: 55px;
+    top: 52px;
     visibility: visible;
     transition: .2s;
 }
@@ -462,15 +478,15 @@ main .task-container-content .task-line-decoration{
 }
 
 
-main .task-container-size.check{
+main .check .task-container-size{
     background-color: rgb(47, 138, 47);
 }
 
-main .task-container-size.check i{
+main .bi-check-circle-fill{
     color: rgb(3, 88, 3);
 }
 
-main .task-container-size.check p.task{
+main .check p.task{
     text-decoration: line-through;
     color: #d3d1d1;
 }
@@ -482,6 +498,24 @@ main .task-container-size.check p.task{
 
 main .list-task-size{
     height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+main .list-task-size::-webkit-scrollbar{
+    width: 1px;
+    background-color: #ce010100;
+    border-radius: 10px;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+main .list-task-size::-webkit-scrollbar-thumb{
+    background-color: #b6050500;
+    z-index: 1;
 }
 
 
