@@ -96,6 +96,38 @@ function desmarcar(id){
 }
 
 
+function changeTheme(){
+    var buttonTheme = window.document.getElementById('buttonTheme');
+    var colorWindow = window.document.getElementById('colorWindow');
+    var infoThemes = window.document.getElementById('infoThemes');
+
+    colorWindow.style.visibility='visible';
+    buttonTheme.style.background='#ffffff49';
+    infoThemes.style.visibility='hidden';
+}
+
+    var mainTheme = window.document.getElementById('main');
+
+function blue(){
+    mainTheme.style.background='blue';
+}
+function green(){
+    mainTheme.style.background='green';
+}
+function red(){
+    mainTheme.style.background='red';
+}
+function aqua(){
+    mainTheme.style.background='aqua';
+}
+function orange(){
+    mainTheme.style.background='orange';
+}
+function pink(){
+    mainTheme.style.background='pink';
+}
+
+
 
 
 
