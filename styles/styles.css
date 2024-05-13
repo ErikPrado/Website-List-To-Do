@@ -1,23 +1,18 @@
-@font-face { font-family: InterExtraBold; src: url(/./fonts/Inter-ExtraBold.otf); }
-@font-face { font-family: InterBold; src: url(/fonts/Inter-Bold.otf); }
-@font-face { font-family: InterSemiBold; src: url(/fonts/Inter-SemiBold.otf); }
-@font-face { font-family: InterMedium; src: url(/fonts/Inter-Medium.otf); }
-@font-face { font-family: InterRegular; src: url(/fonts/Inter-Regular.otf); }
+@font-face { font-family: InterExtraBold; src: url(../fonts/Inter-ExtraBold.otf); }
+@font-face { font-family: InterBold; src: url(../fonts/Inter-Bold.otf); }
+@font-face { font-family: InterSemiBold; src: url(../fonts/Inter-SemiBold.otf); }
+@font-face { font-family: InterMedium; src: url(../fonts/Inter-Medium.otf); }
+@font-face { font-family: InterRegular; src: url(../fonts/Inter-Regular.otf); }
+/* Sempre colocar dois pontos antes do diretório da font, assim irá funcionar corretamente no GIT PAGES */
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{ margin: 0; padding: 0; box-sizing: border-box; }
 
-body{
-    display: flex;
-}
+body{ display: flex; }
 
+
+/* >>>>>>>>>>>>>>> 1ª Parte - Tela de apresentação (BEM-VINDO) <<<<<<<<<<<<<<< */
 .window-welcome-container{
     z-index: 99;
     width: 100%;
@@ -111,12 +106,13 @@ border-bottom: 3px solid #1e8bc2;
     justify-content: center;
     align-items: center;
 }
+/* >>>>>>>>>>>>>>> 1ª Parte - Tela de apresentação (BEM-VINDO) <<<<<<<<<<<<<<< */
 
 
 
 
 
-/* Header */
+/* >>>>>>>>>>>>>>> 2ª Parte - Header (CABEÇALHO) <<<<<<<<<<<<<<< */
 header {
     width: 320px;
     height: 100vh;
@@ -231,13 +227,13 @@ header .version{
     bottom: 30px;
     left: 15px;
 }
-
-/* Header */
-
+/* >>>>>>>>>>>>>>> 2ª Parte - Header (CABEÇALHO) <<<<<<<<<<<<<<< */
 
 
 
-/* Main */
+
+
+/* >>>>>>>>>>>>>>> 3ª Parte - Main (TELA PRINCIPAL) <<<<<<<<<<<<<<< */
 main {
     width: 100%;
     height: 100vh;
@@ -257,6 +253,7 @@ main .line-decoration{
     margin-bottom: 30px;
 }
 
+/* Parte de informações do main (INFO) */
 main .info-size-container{
     width: 100%;
     display: flex;
@@ -285,7 +282,7 @@ main .info-size-container .s-column{
     gap: 15px;
 }
 
-main .info-size-container .s-column .button-size-g-linguage{
+main .info-size-container .s-column .button-size-g-language{
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -298,18 +295,18 @@ main .info-size-container .s-column .button-size-g-linguage{
     background-color: #ffffff00;
 }
 
-main .info-size-container .s-column .button-size-g-linguage:hover .info-Linguage{
+main .info-size-container .s-column .button-size-g-language:hover .info-Language{
     visibility: visible;
     bottom: -35px;
     transition: .2s ease;
 }
 
-main .info-size-container .s-column .button-size-g-linguage:hover{
+main .info-size-container .s-column .button-size-g-language:hover{
     background-color: #ffffff49;
     transition: .2s;
 }
 
-main .info-size-container .s-column .button-size-g-linguage i {
+main .info-size-container .s-column .button-size-g-language i {
     color: #FFF;
     margin-right: 6px;
 }
@@ -362,9 +359,9 @@ main .info-size-container .s-column .button-size-g:hover .info-color{
     transition: .2s ease;
 }
 
-main .info-size-container .info-Linguage{
+main .info-size-container .info-Language{
     background-color: #FFF;
-    width: 100px;
+    width: 80px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -485,7 +482,6 @@ main .color-window .bg.pink-bg{
     background: linear-gradient(150deg, rgba(187,12,138,1) 0%, rgba(86,6,92,1) 100%);
 }
 
-
 main .color-window .bg{
     width: 50px;
     height: 50px;
@@ -493,7 +489,11 @@ main .color-window .bg{
     border-radius: 5px;
     cursor: pointer;
 }
+/* Parte de informações do main (INFO) */
 
+
+
+/* Campo para escrevar tarefa (WRITE TASK) */
 main .info-size-container .s-column .button-size-g:hover {
     background-color: #ffffff49;
     transition: .2s;
@@ -537,7 +537,6 @@ main .input-txt::placeholder{
     color: #FFF;
 }
 
-
 main .input-container button.enviar:hover .btn-info{
     top: 50px;
     transition: .2s;
@@ -561,8 +560,11 @@ main .btn-info{
     right: -17px;
     visibility: hidden;
 }
+/* Campo para escrevar tarefa (WRITE TASK) */
 
 
+
+/* Tarefas Escritas (DEFAULT) */
 main .task-container-size{
     width: 100%;
     height: 60px;
@@ -602,8 +604,6 @@ main .time-task{
     font-size: 13px;
     color: #DBDBDB;
 }
-
-
 
 main p.task{
     color: #FFF;
@@ -665,8 +665,11 @@ main .task-container-content .task-line-decoration{
     margin-top: 15px;
     margin-bottom: 10px;
 }
+/* Tarefas Escritas (DEFAULT) */
 
 
+
+/* Tarefas Prontas (CHECK) */
 main .check .task-container-size{
     background-color: rgb(47, 138, 47);
 }
@@ -681,10 +684,14 @@ main .check p.task{
 }
 
 
-.check p.time-task{
+main .check p.time-task{
     color: #BEBEBE;
 }
+/* Tarefas Prontas (CHECK) */
 
+
+
+/* Div da lista de tarefas (Aqui que fica todas as tarefas) */
 main .list-task-size{
     height: 100%;
     width: 100%;
@@ -706,6 +713,6 @@ main .list-task-size::-webkit-scrollbar-thumb{
     background-color: #b6050500;
     z-index: 1;
 }
+/* Div da lista de tarefas (Aqui que fica todas as tarefas) */
 
-
-/* Main */
+/* >>>>>>>>>>>>>>> 3ª Parte - Main (TELA PRINCIPAL) <<<<<<<<<<<<<<< */

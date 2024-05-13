@@ -1,7 +1,38 @@
 let contador = 0;
 
+// >>>>>>>>>>>>>>> Data atual no menu.
+var data = new Date()
+console.log (data);
 
 
+const mesesDoAno = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+let mesEscrito = mesesDoAno[data.getMonth()];
+
+const diaDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+let diaSemana = diaDaSemana[data.getDay()];
+
+console.log(diaSemana);
+
+
+console.log(mesEscrito);
+
+var ano = data.getFullYear();
+console.log(ano);
+
+
+var diaDoMes = data.getDate();
+console.log (diaDoMes);
+
+
+let txtTime = window.document.getElementById('txtTime');
+txtTime.innerHTML=`${diaSemana}, ${diaDoMes} de ${mesEscrito} de ${ano}.`
+// >>>>>>>>>>>>>>> Data atual no menu.
+
+
+
+
+
+// >>>>>>>>>>>>>>> Função de Continuar ao digitar o nome da primeira tela de boas vindas.
 function continuar(){
     var inputName = window.document.getElementById('inputName');
     var nameUsuario = (inputName.value);
@@ -14,13 +45,17 @@ if ((nameUsuario !== "") && (nameUsuario !== null) && (nameUsuario !== undefined
     windowContainer.style.visibility='hidden'
     }
 };
+// >>>>>>>>>>>>>>> Função de Continuar ao digitar o nome da primeira tela de boas vindas.
 
 
+
+
+
+// >>>>>>>>>>>>>>> Função de Adicionar uma tarefa.
 function adicionar(){
     var inputTaskTxt = window.document.getElementById('inputTaskTxt');
     var taskTxt = (inputTaskTxt.value);
     var listTask = window.document.getElementById('areaTask');
-    var pTime = document.getElementById('timeTask');
 
     ++contador;
 
@@ -55,9 +90,13 @@ function adicionar(){
     inputTaskTxt.focus();
     }
 }
+// >>>>>>>>>>>>>>> Função de Adicionar uma tarefa.
 
 
 
+
+
+// >>>>>>>>>>>>>>> Função de apertar a tecla ENTER já adicionar a tarefa.
 document.addEventListener("keyup", function(event){
 var btnAdd = window.document.getElementById('btnAdd');
 var btnContinue = window.document.getElementById('btnContinue')
@@ -68,13 +107,25 @@ var btnContinue = window.document.getElementById('btnContinue')
     }
 }
 )
+// >>>>>>>>>>>>>>> Função de apertar a tecla ENTER já adicionar a tarefa.
 
+
+
+
+
+// >>>>>>>>>>>>>>> Função de remover uma tarefa.
 function del(id){
     var tarefa = document.getElementById(id);
     tarefa.remove();
 
 }
+// >>>>>>>>>>>>>>> Função de remover uma tarefa.
 
+
+
+
+
+// >>>>>>>>>>>>>>> Função de marcar uma tarefa como pronta.
 function ativar(id){
     var item = document.getElementById(id);
     item.classList.add('check');
@@ -85,7 +136,13 @@ function ativar(id){
 
     item.parentNode.appendChild(item);
 }
+// >>>>>>>>>>>>>>> Função de marcar uma tarefa como pronta.
 
+
+
+
+
+// >>>>>>>>>>>>>>> Função desmarcar uma tarefa como pronta.
 function desmarcar(id){
     var item = document.getElementById(id);
     item.classList.remove('check');
@@ -94,8 +151,13 @@ function desmarcar(id){
     icone.classList.add('bi-circle-fill');
     icone.classList.remove('bi-check-circle-fill');
 }
+// >>>>>>>>>>>>>>> Função desmarcar uma tarefa como pronta.
 
 
+
+
+
+// >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
 function changeTheme(){
     var buttonTheme = window.document.getElementById('buttonTheme');
     var colorWindow = window.document.getElementById('colorWindow');
@@ -126,32 +188,4 @@ function orange(){
 function pink(){
     mainTheme.style.background='pink';
 }
-
-
-
-
-
-
-/*
-var pData = document.getElementById("pData");
-
-let data = new Date(); 
-
-let ano = data.getFullYear();
-console.log(ano); //ano
-
-let mes = data.getMonth();
-const meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
-//                 0            1          2        3       4       5         6         7           8          9          10        11
-let mesEscrito = meses[data.getMonth()];
-
-let semana = data.getDay();
-const diaSemana = ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"]
-let diaSemanaEscrito = diaSemana[data.getDay()];
-
-let diaMes = data.getDate();
-
-const dataCompleta = DiaSemanaEscrito + "," + diaMes + "de" + mesEscrito + "de" + ano
-
-pData.innerHTML = dataCompleta
-*/
+// >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
