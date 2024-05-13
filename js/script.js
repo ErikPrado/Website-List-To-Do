@@ -30,6 +30,11 @@ txtTime.innerHTML=`${diaSemana}, ${diaDoMes} de ${mesEscrito} de ${ano}.`
 
 
 
+function autoInput(){
+    inputTaskTxt.focus();
+}
+
+
 
 
 // >>>>>>>>>>>>>>> Função de Continuar ao digitar o nome da primeira tela de boas vindas.
@@ -56,6 +61,7 @@ function adicionar(){
     var inputTaskTxt = window.document.getElementById('inputTaskTxt');
     var taskTxt = (inputTaskTxt.value);
     var listTask = window.document.getElementById('areaTask');
+
 
     ++contador;
 

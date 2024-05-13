@@ -701,6 +701,46 @@ main .list-task-size{
     overflow-y: scroll;
 }
 
+main .list-task-size .no-task-size-container{
+    margin: auto auto;
+    display: block;
+}
+
+main .list-task-size .no-task-size{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .list-task-size .no-task-size p.task-off{
+    font-size: 18px;
+    font-family: InterMedium;
+    color: #ffffff3b;
+    margin: 10px 0px;
+}
+
+main .list-task-size .no-task-size button.off{
+    background-color: #ffffff49;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #FFF;
+    font-family: InterMedium;
+    cursor: pointer;
+}
+
+main .list-task-size .no-task-size svg{
+    width: 280px;
+    height: 200px;
+}
+
+main .list-task-size .no-task-size button.off:hover{
+    background-color: #ffffff62;
+    transition: .2s;
+}
+
 main .list-task-size::-webkit-scrollbar{
     width: 1px;
     background-color: #ce010100;
