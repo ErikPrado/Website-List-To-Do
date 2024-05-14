@@ -444,7 +444,7 @@ main .color-window .line-dct{
     margin-top: 5px;
 }
 
-main .color-window .f-column,main .color-window .s-column{
+main .color-window .f-column{
     width: 100%;
     height: 50px;
     display: flex;

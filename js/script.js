@@ -2,7 +2,6 @@ let contador = 0;
 
 // >>>>>>>>>>>>>>> Data atual no menu.
 var data = new Date()
-console.log (data);
 
 
 const mesesDoAno = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
@@ -11,17 +10,10 @@ let mesEscrito = mesesDoAno[data.getMonth()];
 const diaDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
 let diaSemana = diaDaSemana[data.getDay()];
 
-console.log(diaSemana);
-
-
-console.log(mesEscrito);
-
 var ano = data.getFullYear();
-console.log(ano);
 
 
 var diaDoMes = data.getDate();
-console.log (diaDoMes);
 
 
 let txtTime = window.document.getElementById('txtTime');
@@ -43,6 +35,7 @@ function continuar(){
     var nameUsuario = (inputName.value);
     var campoNameUsuario = window.document.getElementById('campoNameUsuario');
     var windowContainer = window.document.getElementById('windowContainer');
+    
 
 
 if ((nameUsuario !== "") && (nameUsuario !== null) && (nameUsuario !== undefined)){
@@ -61,6 +54,19 @@ function adicionar(){
     var inputTaskTxt = window.document.getElementById('inputTaskTxt');
     var taskTxt = (inputTaskTxt.value);
     var listTask = window.document.getElementById('areaTask');
+    var nothingTask = window.document.getElementById('nothingTaskDiv');
+
+
+    let data = new Date();
+    let hours = data.getHours();
+    let minutes = data.getMinutes();
+
+
+
+    function addZero(x){ return x < 10 ? '0' + x : '' + x; };
+    let hoursMinutes = addZero(hours) + ":" + addZero(minutes);
+    
+    
 
 
     ++contador;
@@ -76,7 +82,7 @@ function adicionar(){
                 </div>
                 <div class="s-column" ">
                     <p class="task"> ${taskTxt} </p>
-                    <p class="time-task" id="timeTask"> EM BREVE: Horário atual </p>
+                    <p class="time-task" id="timeTask"> ${hoursMinutes} </p>
                 </div>
                 <div class="t-column" >
                 <button onclick="del(${contador})" >
@@ -89,12 +95,18 @@ function adicionar(){
             </div>
         </div>
     `
-
+    nothingTask.style.display='none';
     listTask.innerHTML +=  novaTask    
     
     inputTaskTxt.value = "";
     inputTaskTxt.focus();
+
+    
+    
     }
+
+    
+    
 }
 // >>>>>>>>>>>>>>> Função de Adicionar uma tarefa.
 
