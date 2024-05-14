@@ -226,7 +226,6 @@ function pink(){
 
 
 // >>>>>>>>>>>>>>> Função de alterar o idioma.
-var pTitleWebSite = window.document.getElementById('pTitleWebSite');
 var versio = window.document.getElementById('version');
 var pLocal = window.document.getElementById('pLocal');
 var pAjuda = window.document.getElementById('pAjuda');
@@ -256,7 +255,6 @@ function translateEnglish(){
     pLangagues.innerHTML = "Languages";
     hLangagues.innerHTML = "Languages";
     pThemes.innerHTML = "Themes";
-    pTitleWebSite.innerHTML = "To-do list";
 }
 
 function translateEspanol(){
@@ -273,7 +271,6 @@ function translateEspanol(){
     pLangagues.innerHTML = "Línguas";
     hLangagues.innerHTML = "Línguas";
     pThemes.innerHTML = "Temas";
-    pTitleWebSite.innerHTML = "Lista de tareas";
 }
 
 function translatePortugues(){
@@ -290,6 +287,5 @@ function translatePortugues(){
     pLangagues.innerHTML = "Idiomas";
     hLangagues.innerHTML = "Idiomas";
     pThemes.innerHTML = "Temas";
-    pTitleWebSite.innerHTML = "Lista de tarefas";
 }
 // >>>>>>>>>>>>>>> Função de alterar o idioma.
