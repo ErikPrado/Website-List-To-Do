@@ -88,7 +88,7 @@ function adicionar(){
                 <button onclick="del(${contador})" >
                     <i class="bi bi-trash-fill" ></i>
                         <div class="info-trash">
-                        <p>Deletar</p>
+                        <p id="pDel">Deletar</p>
                     </div>
                 </button>
                 </div>
@@ -100,13 +100,7 @@ function adicionar(){
     
     inputTaskTxt.value = "";
     inputTaskTxt.focus();
-
-    
-    
     }
-
-    
-    
 }
 // >>>>>>>>>>>>>>> Função de Adicionar uma tarefa.
 
@@ -169,7 +163,7 @@ function ativar(id){
 
 
 
-// >>>>>>>>>>>>>>> Função de abir o painel de  plano de fundo.
+// >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
 function changeTheme(){
     var buttonTheme = window.document.getElementById('buttonTheme');
     var colorWindow = window.document.getElementById('colorWindow');
@@ -180,7 +174,28 @@ function changeTheme(){
     infoThemes.style.visibility='hidden';
 }
     var mainTheme = window.document.getElementById('main');
-// >>>>>>>>>>>>>>> Função de abir o painel de  plano de fundo.
+// >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
+
+
+
+
+
+// >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
+function changeLanguage(){
+    var buttonLanguage = window.document.getElementById('buttonLanguage');
+    var languageWindow = window.document.getElementById('languageWindow');
+    var infoLanguage = window.document.getElementById('infoLanguage');
+
+    languageWindow.style.visibility='visible';
+    buttonLanguage.style.background='#ffffff49';
+    infoLanguage.style.visibility='hidden';
+}
+    var mainTheme = window.document.getElementById('main');
+// >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
+
+
+
+
 
 // >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
 function blue(){
@@ -205,3 +220,76 @@ function pink(){
    mainTheme.setAttribute("class","bg-color-pink")
 }
 // >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
+
+
+
+
+
+// >>>>>>>>>>>>>>> Função de alterar o idioma.
+var pTitleWebSite = window.document.getElementById('pTitleWebSite');
+var versio = window.document.getElementById('version');
+var pLocal = window.document.getElementById('pLocal');
+var pAjuda = window.document.getElementById('pAjuda');
+var pSobre = window.document.getElementById('pSobre');
+var pFeedback = window.document.getElementById('pFeedback');
+var myList = window.document.getElementById('myList');
+var noTask = window.document.getElementById('noTask');
+var createTask = window.document.getElementById('createTask');
+var add = window.document.getElementById('add');
+var pBackgroundTheme = window.document.getElementById('pBackgroundTheme');
+var pLangagues = window.document.getElementById('pLangagues');
+var hLangagues = window.document.getElementById('hLangagues');
+var pThemes = window.document.getElementById('pThemes');
+
+
+function translateEnglish(){
+    version.innerHTML = "Version 1.07";
+    pLocal.innerHTML="Local account";
+    pAjuda.innerHTML="Help";
+    pSobre.innerHTML="About the website";
+    pFeedback.innerHTML ="Feedback";
+    myList.innerHTML = "My List";
+    noTask.innerHTML = "No tasks available."
+    createTask.innerHTML = "Create task"
+    add.innerHTML = "To add"
+    pBackgroundTheme.innerHTML = "Background themes"
+    pLangagues.innerHTML = "Languages";
+    hLangagues.innerHTML = "Languages";
+    pThemes.innerHTML = "Themes";
+    pTitleWebSite.innerHTML = "To-do list";
+}
+
+function translateEspanol(){
+    version.innerHTML = "Versión 1.07";
+    pLocal.innerHTML="Cuenta local";
+    pAjuda.innerHTML="Ayuda";
+    pSobre.innerHTML ="Sobre el sitio web"
+    pFeedback.innerHTML = "Comentario";
+    myList.innerHTML = "Mi Lista";
+    noTask.innerHTML = "No hay tareas disponibles."
+    createTask.innerHTML = "Crear tarea"
+    add.innerHTML = "Agregar"
+    pBackgroundTheme.innerHTML = "Temas de fondo"
+    pLangagues.innerHTML = "Línguas";
+    hLangagues.innerHTML = "Línguas";
+    pThemes.innerHTML = "Temas";
+    pTitleWebSite.innerHTML = "Lista de tareas";
+}
+
+function translatePortugues(){
+    version.innerHTML = "Versão 1.07";
+    pLocal.innerHTML="Conta Local";
+    pAjuda.innerHTML="Ajuda";
+    pSobre.innerHTML="Sobre o site";
+    pFeedback.innerHTML = "Feedback";
+    myList.innerHTML = "Minha Lista";
+    noTask.innerHTML = "Nenhuma tarefa disponível."
+    createTask.innerHTML = "Criar Tarefa"
+    add.innerHTML = "Adicionar"
+    pBackgroundTheme.innerHTML = "Temas de fundo"
+    pLangagues.innerHTML = "Idiomas";
+    hLangagues.innerHTML = "Idiomas";
+    pThemes.innerHTML = "Temas";
+    pTitleWebSite.innerHTML = "Lista de tarefas";
+}
+// >>>>>>>>>>>>>>> Função de alterar o idioma.
