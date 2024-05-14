@@ -76,7 +76,7 @@ function adicionar(){
     <div class="task-container-content" id=${contador}>
 
                 <div class="task-line-decoration"></div>
-    <div class="task-container-size" onclick="ativar(${contador})" ondblclick="desmarcar(${contador})">
+    <div class="task-container-size" onclick="ativar(${contador})">
                 <div class="f-column">
                     <i id="icone_${contador}" class="bi bi-circle-fill"></i>
                 </div>
@@ -146,13 +146,22 @@ function del(id){
 // >>>>>>>>>>>>>>> Função de marcar uma tarefa como pronta.
 function ativar(id){
     var item = document.getElementById(id);
+    item.classList.toggle('check')
+    item.parentNode.appendChild(item);
+
+    /*
     item.classList.add('check');
 
     var icone = document.getElementById('icone_'+id)
     icone.classList.remove('bi-circle-fill');
     icone.classList.add('bi-check-circle-fill');
 
-    item.parentNode.appendChild(item);
+
+    */
+
+
+
+
 }
 // >>>>>>>>>>>>>>> Função de marcar uma tarefa como pronta.
 
@@ -160,22 +169,7 @@ function ativar(id){
 
 
 
-// >>>>>>>>>>>>>>> Função desmarcar uma tarefa como pronta.
-function desmarcar(id){
-    var item = document.getElementById(id);
-    item.classList.remove('check');
-
-    var icone = document.getElementById('icone_'+id)
-    icone.classList.add('bi-circle-fill');
-    icone.classList.remove('bi-check-circle-fill');
-}
-// >>>>>>>>>>>>>>> Função desmarcar uma tarefa como pronta.
-
-
-
-
-
-// >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
+// >>>>>>>>>>>>>>> Função de abir o painel de  plano de fundo.
 function changeTheme(){
     var buttonTheme = window.document.getElementById('buttonTheme');
     var colorWindow = window.document.getElementById('colorWindow');
@@ -185,25 +179,29 @@ function changeTheme(){
     buttonTheme.style.background='#ffffff49';
     infoThemes.style.visibility='hidden';
 }
-
     var mainTheme = window.document.getElementById('main');
+// >>>>>>>>>>>>>>> Função de abir o painel de  plano de fundo.
 
+// >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
 function blue(){
-    mainTheme.style.background='blue';
+    mainTheme.setAttribute("class","bg-color-blue")
 }
 function green(){
-    mainTheme.style.background='green';
+    mainTheme.setAttribute("class","bg-color-green")
 }
+
 function red(){
-    mainTheme.style.background='red';
+    mainTheme.setAttribute("class","bg-color-red")
 }
 function aqua(){
-    mainTheme.style.background='aqua';
+    mainTheme.setAttribute("class","bg-color-aqua")
 }
+
 function orange(){
-    mainTheme.style.background='orange';
+  mainTheme.setAttribute("class","bg-color-orange")
 }
+
 function pink(){
-    mainTheme.style.background='pink';
+   mainTheme.setAttribute("class","bg-color-pink")
 }
 // >>>>>>>>>>>>>>> Função de alterar o plano de fundo.

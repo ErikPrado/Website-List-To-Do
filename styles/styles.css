@@ -7,7 +7,7 @@
 
 a { text-decoration: none; }
 
-*{ margin: 0; padding: 0; box-sizing: border-box; }
+*{ margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
 
 body{ display: flex; }
 
@@ -235,10 +235,10 @@ header .version{
 
 /* >>>>>>>>>>>>>>> 3ª Parte - Main (TELA PRINCIPAL) <<<<<<<<<<<<<<< */
 main {
+    background: rgb(146,31,156);
+    background: linear-gradient(150deg, rgba(146,31,156,1) 0%, rgba(214,95,28,1) 100%);
     width: 100%;
     height: 100vh;
-    background: rgb(146,31,156);
-    background: linear-gradient(150deg, rgba(146,31,156,1) 32%, rgba(214,95,28,1) 100%);
     padding: 30px 40px 40px 40px;
     display: flex;
     flex-direction: column;
@@ -436,14 +436,6 @@ main .color-window h3{
     font-family: InterBold;
 }
 
-main .color-window .line-dct{
-    width: 130px;
-    height: 3px;
-    background-color: #000;
-    border-radius: 200px;
-    margin-top: 5px;
-}
-
 main .color-window .f-column{
     width: 100%;
     height: 50px;
@@ -453,23 +445,25 @@ main .color-window .f-column{
 }
 
 main .color-window .bg.blue-bg{
-    background: rgb(24,81,227);
-    background: linear-gradient(150deg, rgba(24,81,227,1) 0%, rgba(21,153,171,1) 100%);
+    background: rgb(53,86,171);
+    background: linear-gradient(150deg, rgba(53,86,171,1) 0%, rgba(163,14,14,1) 100%);
+
 }
 
 main .color-window .bg.green-bg{
-    background: rgb(24,98,40);
-    background: linear-gradient(150deg, rgba(24,98,40,1) 0%, rgba(11,153,119,1) 100%);
+    background: rgb(75,140,128);
+    background: linear-gradient(150deg, rgba(75,140,128,1) 0%, rgba(142,26,33,1) 100%);
 }
 
 main .color-window .bg.red-bg{
-    background: rgb(183,29,29);
-    background: linear-gradient(150deg, rgba(183,29,29,1) 0%, rgba(142,11,11,1) 100%);
+    background: rgb(31,156,148);
+    background: linear-gradient(150deg, rgba(31,156,148,1) 0%, rgba(146,11,149,1) 100%);
 }
 
 main .color-window .bg.aqua-bg{
-    background: rgb(31,156,148);
-    background: linear-gradient(150deg, rgba(31,156,148,1) 0%, rgba(146,11,149,1) 100%);
+
+    background: rgb(10,62,161);
+    background: linear-gradient(150deg, rgba(10,62,161,1) 0%, rgba(176,14,141,1) 100%);
 }
 
 main .color-window .bg.orange-bg{
@@ -485,9 +479,53 @@ main .color-window .bg.pink-bg{
 main .color-window .bg{
     width: 50px;
     height: 50px;
-    background-color: red;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+.bg-color-blue{
+    background: rgb(53,86,171);
+    background: linear-gradient(150deg, rgba(53,86,171,1) 0%, rgba(163,14,14,1) 100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.bg-color-green{
+    background: rgb(75,140,128);
+    background: linear-gradient(150deg, rgba(75,140,128,1) 0%, rgba(142,26,33,1) 100%);
+    transition: all 0.25s ease-in-out;
+}
+
+.bg-color-red{
+    background: rgb(31,156,148);
+    background: linear-gradient(150deg, rgba(31,156,148,1) 0%, rgba(146,11,149,1) 100%);
+    transition: all 0.25s ease-in-out;
+}
+
+.bg-color-aqua{
+    background: rgb(10,62,161);
+    background: linear-gradient(150deg, rgba(10,62,161,1) 0%, rgba(176,14,141,1) 100%);
+    transition: all 0.25s ease-in-out;
+}
+
+.bg-color-orange{
+    background: rgb(146,31,156);
+    background: linear-gradient(150deg, rgba(146,31,156,1) 0%, rgba(214,95,28,1) 100%);
+    transition: all 0.25s ease-in-out;
+}
+
+.bg-color-pink{
+    background: rgb(187,12,138);
+    background: linear-gradient(150deg, rgba(187,12,138,1) 0%, rgba(86,6,92,1) 100%);
+    transition: all 0.25s ease-in-out;
+}
+
+.select{
+    border: 2px solid #000;
+}
+
+.visible{
+    visibility: hidden;
 }
 /* Parte de informações do main (INFO) */
 
