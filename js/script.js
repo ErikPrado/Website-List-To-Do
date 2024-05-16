@@ -1,5 +1,9 @@
 let contador = 0;
 
+
+var circlePhotoProfile = window.document.getElementById('circlePhotoProfile');
+circlePhotoProfile.setAttribute("class", "b-icon-pic-2")
+
 // >>>>>>>>>>>>>>> Data atual no menu.
 var data = new Date()
 
@@ -90,7 +94,7 @@ function adicionar(){
                 <button onclick="del(${contador})" >
                     <i class="bi bi-trash-fill" ></i>
                         <div class="info-trash">
-                        <p id="pDel">Deletar</p>
+                        <p id="pDel"> Deletar </p>
                     </div>
                 </button>
                 </div>
@@ -146,7 +150,6 @@ function ativar(id){
 
     item.classList.toggle('check');
     item.parentNode.appendChild(item);
-
 }
 
 
@@ -240,13 +243,36 @@ function ocean(){
     mainTheme.setAttribute("class", "b-background-ocean")
 }
 
-
 function nature1(){
     mainTheme.setAttribute("class", "b-background-nature-1")
 }
 
 function nature2(){
     mainTheme.setAttribute("class", "b-background-nature-2")
+}
+
+function iconPic1(){
+    circlePhotoProfile.setAttribute("class", "b-icon-pic-1")
+}
+
+function iconPic2(){
+    circlePhotoProfile.setAttribute("class", "b-icon-pic-2")
+}
+
+function iconFemale1(){
+    circlePhotoProfile.setAttribute("class", "b-icon-female-pic-1")
+}
+
+function iconFemale2(){
+    circlePhotoProfile.setAttribute("class", "b-icon-female-pic-2")
+}
+
+function iconMale1(){
+    circlePhotoProfile.setAttribute("class", "b-icon-male-pic-1")
+}
+
+function iconMale2(){
+    circlePhotoProfile.setAttribute("class", "b-icon-male-pic-2")
 }
 // >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
 
