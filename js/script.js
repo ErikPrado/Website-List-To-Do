@@ -164,15 +164,21 @@ function ativar(id){
 
 
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
-function changeTheme(){
-    var buttonTheme = window.document.getElementById('buttonTheme');
-    var colorWindow = window.document.getElementById('colorWindow');
-    var infoThemes = window.document.getElementById('infoThemes');
+var buttonTheme = window.document.getElementById('buttonTheme');
+var colorWindow = window.document.getElementById('colorWindow');
+var infoThemes = window.document.getElementById('infoThemes');
+var mainTheme = window.document.getElementById('main');
 
-    colorWindow.style.visibility='visible';
-    buttonTheme.style.background='#ffffff49';
-    infoThemes.style.visibility='hidden';
+function changeTheme(){
+    if(colorWindow.style.visibility === "hidden") {
+        colorWindow.style.visibility = "visible";
+    } else {
+        colorWindow.style.visibility = "hidden";
+    }
 }
+
+
+
     var mainTheme = window.document.getElementById('main');
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
 
@@ -181,7 +187,21 @@ function changeTheme(){
 
 
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
+    var languageWindow = window.document.getElementById('languageWindow');
 function changeLanguage(){
+    
+    if(languageWindow.style.visibility === "hidden") {
+        languageWindow.style.visibility = "visible";
+    } else {
+        languageWindow.style.visibility = "hidden";
+    }
+    
+    /*
+
+
+
+
+
     var buttonLanguage = window.document.getElementById('buttonLanguage');
     var languageWindow = window.document.getElementById('languageWindow');
     var infoLanguage = window.document.getElementById('infoLanguage');
@@ -189,8 +209,10 @@ function changeLanguage(){
     languageWindow.style.visibility='visible';
     buttonLanguage.style.background='#ffffff49';
     infoLanguage.style.visibility='hidden';
+    */
 }
     var mainTheme = window.document.getElementById('main');
+    
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
 
 
@@ -198,18 +220,8 @@ function changeLanguage(){
 
 
 // >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
-function blue(){
-    mainTheme.setAttribute("class","bg-color-blue")
-}
-function green(){
-    mainTheme.setAttribute("class","bg-color-green")
-}
-
 function red(){
     mainTheme.setAttribute("class","bg-color-red")
-}
-function aqua(){
-    mainTheme.setAttribute("class","bg-color-aqua")
 }
 
 function orange(){
@@ -219,6 +231,31 @@ function orange(){
 function pink(){
    mainTheme.setAttribute("class","bg-color-pink")
 }
+
+function ocean(){
+    mainTheme.setAttribute("class", "b-background-ocean")
+}
+
+function work(){
+    mainTheme.setAttribute("class", "b-background-work-table")
+}
+
+function car(){
+    mainTheme.setAttribute("class", "b-background-car-yellow")
+}
+
+function nature1(){
+    mainTheme.setAttribute("class", "b-background-nature-1")
+}
+
+function nature2(){
+    mainTheme.setAttribute("class", "b-background-nature-2")
+}
+
+function nature3(){
+    mainTheme.setAttribute("class", "b-background-nature-3")
+}
+
 // >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
 
 
@@ -226,9 +263,8 @@ function pink(){
 
 
 // >>>>>>>>>>>>>>> Função de alterar o idioma.
-var versio = window.document.getElementById('version');
+var version = window.document.getElementById('version');
 var pLocal = window.document.getElementById('pLocal');
-var pAjuda = window.document.getElementById('pAjuda');
 var pSobre = window.document.getElementById('pSobre');
 var pFeedback = window.document.getElementById('pFeedback');
 var myList = window.document.getElementById('myList');
@@ -244,7 +280,6 @@ var pThemes = window.document.getElementById('pThemes');
 function translateEnglish(){
     version.innerHTML = "Version 1.07";
     pLocal.innerHTML="Local account";
-    pAjuda.innerHTML="Help";
     pSobre.innerHTML="About the website";
     pFeedback.innerHTML ="Feedback";
     myList.innerHTML = "My List";
@@ -255,12 +290,33 @@ function translateEnglish(){
     pLangagues.innerHTML = "Languages";
     hLangagues.innerHTML = "Languages";
     pThemes.innerHTML = "Themes";
+
+    var data = new Date()
+
+
+    const mesesDoAno = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Dezember"];
+    let mesEscrito = mesesDoAno[data.getMonth()];
+    
+    const diaDaSemana = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let diaSemana = diaDaSemana[data.getDay()];
+    
+    var ano = data.getFullYear();
+    
+    
+    var diaDoMes = data.getDate();
+    
+    
+    let txtTime = window.document.getElementById('txtTime');
+    txtTime.innerHTML=`${diaSemana}, ${diaDoMes} ${mesEscrito}, ${ano}.`
+
+
+
+
 }
 
 function translateEspanol(){
     version.innerHTML = "Versión 1.07";
     pLocal.innerHTML="Cuenta local";
-    pAjuda.innerHTML="Ayuda";
     pSobre.innerHTML ="Sobre el sitio web"
     pFeedback.innerHTML = "Comentario";
     myList.innerHTML = "Mi Lista";
@@ -271,12 +327,29 @@ function translateEspanol(){
     pLangagues.innerHTML = "Línguas";
     hLangagues.innerHTML = "Línguas";
     pThemes.innerHTML = "Temas";
+
+    var data = new Date()
+
+
+    const mesesDoAno = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "julio", "Agosto", "Septiembre", "Octubre", "Noviembre ", "Diciembre"];
+    let mesEscrito = mesesDoAno[data.getMonth()];
+
+    const diaDaSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+    let diaSemana = diaDaSemana[data.getDay()];
+
+    var ano = data.getFullYear();
+
+
+    var diaDoMes = data.getDate();
+
+
+    let txtTime = window.document.getElementById('txtTime');
+    txtTime.innerHTML=`${diaSemana}, ${diaDoMes} de ${mesEscrito} de ${ano}.`
 }
 
 function translatePortugues(){
     version.innerHTML = "Versão 1.07";
     pLocal.innerHTML="Conta Local";
-    pAjuda.innerHTML="Ajuda";
     pSobre.innerHTML="Sobre o site";
     pFeedback.innerHTML = "Feedback";
     myList.innerHTML = "Minha Lista";
@@ -287,5 +360,23 @@ function translatePortugues(){
     pLangagues.innerHTML = "Idiomas";
     hLangagues.innerHTML = "Idiomas";
     pThemes.innerHTML = "Temas";
+
+    var data = new Date()
+
+
+    const mesesDoAno = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+    let mesEscrito = mesesDoAno[data.getMonth()];
+
+    const diaDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+    let diaSemana = diaDaSemana[data.getDay()];
+
+    var ano = data.getFullYear();
+
+
+    var diaDoMes = data.getDate();
+
+
+    let txtTime = window.document.getElementById('txtTime');
+    txtTime.innerHTML=`${diaSemana}, ${diaDoMes} de ${mesEscrito} de ${ano}.`
 }
 // >>>>>>>>>>>>>>> Função de alterar o idioma.

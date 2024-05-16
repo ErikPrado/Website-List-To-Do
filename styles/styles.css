@@ -11,7 +11,6 @@ a { text-decoration: none; }
 
 body{ display: flex; }
 
-
 /* >>>>>>>>>>>>>>> 1ª Parte - Tela de apresentação (BEM-VINDO) <<<<<<<<<<<<<<< */
 .window-welcome-container{
     z-index: 99;
@@ -46,6 +45,7 @@ body{ display: flex; }
 .window-welcome-container .welcome-size .f-column h2{
     font-size: 30px;
     font-family: InterExtraBold;
+    color: #000;
 }
 
 .window-welcome-container .welcome-size .f-column p{
@@ -197,7 +197,27 @@ header nav.tropics ul li, header nav.social-medias ul li p {
 }
 
 header .spc{
-    margin: 15px 0px;
+    margin-bottom: 15px;
+}
+
+header .img-box{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.figma{
+    background-image: url(../img/icon-figma.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.github{
+    background-image: url(../img/icon-github.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header nav.social-medias ul li {
@@ -299,7 +319,7 @@ main .language-window{
     width: 200px;
     background-color: rgba(255, 255, 255, 0.212);
     top: 45px;
-    right: 0px;
+    right: -80px;
     border-radius: 5px;
     z-index: 999;
     background-color: #FFF;
@@ -358,12 +378,6 @@ main .language-size .flag-size.br{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-
-
-main .language-size .black{
-    color: #0775ab;
 }
 
 main .info-size-container .s-column .button-size-g-language:hover .info-Language{
@@ -432,8 +446,7 @@ main .info-size-container .s-column .button-size-g:hover .info-color{
 
 main .info-size-container .info-Language{
     background-color: #FFF;
-    width: 80px;
-    height: 30px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -449,8 +462,7 @@ main .info-size-container .info-Language{
 
 main .info-size-container .info-color{
     background-color: #FFF;
-    width: 70px;
-    height: 30px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -465,8 +477,7 @@ main .info-size-container .info-color{
 
 main .info-size-container .info-DkLgMode{
     background-color: #FFF;
-    width: 100px;
-    height: 30px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -486,10 +497,8 @@ main .info-size-container .s-column .button-size-g i{
 
 main .color-window{
     position: absolute;
-    width: 200px;
-    background-color: rgba(255, 255, 255, 0.212);
     top: 45px;
-    right: 0px;
+    right: -80px;
     border-radius: 5px;
     z-index: 999;
     background-color: #FFF;
@@ -511,30 +520,13 @@ main .color-window .f-column{
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
     margin-top: 15px;
-}
-
-main .color-window .bg.blue-bg{
-    background: rgb(53,86,171);
-    background: linear-gradient(150deg, rgba(53,86,171,1) 0%, rgba(163,14,14,1) 100%);
-
-}
-
-main .color-window .bg.green-bg{
-    background: rgb(75,140,128);
-    background: linear-gradient(150deg, rgba(75,140,128,1) 0%, rgba(142,26,33,1) 100%);
 }
 
 main .color-window .bg.red-bg{
     background: rgb(31,156,148);
     background: linear-gradient(150deg, rgba(31,156,148,1) 0%, rgba(146,11,149,1) 100%);
-}
-
-main .color-window .bg.aqua-bg{
-
-    background: rgb(10,62,161);
-    background: linear-gradient(150deg, rgba(10,62,161,1) 0%, rgba(176,14,141,1) 100%);
 }
 
 main .color-window .bg.orange-bg{
@@ -554,28 +546,9 @@ main .color-window .bg{
     cursor: pointer;
 }
 
-
-.bg-color-blue{
-    background: rgb(53,86,171);
-    background: linear-gradient(150deg, rgba(53,86,171,1) 0%, rgba(163,14,14,1) 100%);
-    transition: all 0.5s ease-in-out;
-}
-
-.bg-color-green{
-    background: rgb(75,140,128);
-    background: linear-gradient(150deg, rgba(75,140,128,1) 0%, rgba(142,26,33,1) 100%);
-    transition: all 0.25s ease-in-out;
-}
-
 .bg-color-red{
     background: rgb(31,156,148);
     background: linear-gradient(150deg, rgba(31,156,148,1) 0%, rgba(146,11,149,1) 100%);
-    transition: all 0.25s ease-in-out;
-}
-
-.bg-color-aqua{
-    background: rgb(10,62,161);
-    background: linear-gradient(150deg, rgba(10,62,161,1) 0%, rgba(176,14,141,1) 100%);
     transition: all 0.25s ease-in-out;
 }
 
@@ -591,17 +564,49 @@ main .color-window .bg{
     transition: all 0.25s ease-in-out;
 }
 
-.select{
-    border: 2px solid #000;
+
+.b-background-ocean{
+    background-image: url(../img/background-ocean.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.visible-div{
-    visibility: visible;
+.b-background-car-yellow{
+    background-image: url(../img/background-car-yellow.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.hidden-div{
-    visibility: hidden;
+.b-background-work-table{
+    background-image: url(../img/background-work-table.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.b-background-nature-1{
+    background-image: url(../img/background-nature-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.b-background-nature-2{
+    background-image: url(../img/background-nature-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.b-background-nature-3{
+    background-image: url(../img/background-nature-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* Parte de informações do main (INFO) */
 
 
@@ -629,6 +634,11 @@ main .input-txt{
     width: 100%;
     cursor: pointer;
     border-bottom: 3px solid #ffffff18;
+}
+
+main .input-txt:hover{
+    border-bottom: 3px solid #ffffff77;
+    transition: .2s;
 }
 
 main .enviar{
@@ -659,8 +669,7 @@ main .input-container button.enviar:hover .btn-info{
 
 main .btn-info{
     background-color: #FFF;
-    width: 90px;
-    height: 30px;
+    padding: 5px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -686,6 +695,12 @@ main .task-container-size{
     display: flex;
     cursor: pointer;
     z-index: 8;
+    border-bottom: 3px solid #ffffff18;
+}
+
+main .task-container-size:hover{
+    border-bottom: 3px solid #ffffff77;
+    transition: .2s;
 }
 
 main .task-container-size .f-column{
@@ -700,6 +715,7 @@ main i{
     font-size: 20px;
     color: #D9D9D9;
     margin-left: 5px;
+    margin-top: 3px;
 }
 
 main .task-container-size .s-column{
@@ -726,8 +742,9 @@ main p.task{
 }
 
 main .task-container-size .t-column{
-    width: 90px;
+    width: 60px;
     height: 100%;
+    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -741,15 +758,14 @@ main .task-container-size .t-column button{
 }
 
 main .task-container-size .t-column i{
-    font-size: 40px;
+    font-size: 30px;
     margin-right: 5px;
     color: #FFF;
 }
 
 main .task-container-size .t-column .info-trash{
     background-color: #FFF;
-    width: 75px;
-    height: 30px;
+    padding: 5px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -759,7 +775,7 @@ main .task-container-size .t-column .info-trash{
     font-family: InterSemiBold;
     position: absolute;
     top: 40px;
-    right: 3px;
+    right: -8px;
     visibility: hidden;
     z-index: 3;
 }
@@ -789,6 +805,10 @@ main .check .task-container-size{
 
 main .bi-check-circle-fill{
     color: rgb(3, 88, 3);
+}  
+
+main .no-task-size-container .bi-check-circle-fill{
+    color: #FFF;
 }
 
 main .check p.task{
@@ -817,6 +837,7 @@ main .list-task-size{
 main .list-task-size .no-task-size-container{
     margin: auto auto;
     display: block;
+    border-radius: 5px;
 }
 
 main .list-task-size .no-task-size{
@@ -828,8 +849,8 @@ main .list-task-size .no-task-size{
 
 main .list-task-size .no-task-size p.task-off{
     font-size: 18px;
-    font-family: InterMedium;
-    color: #ffffff3b;
+    font-family: InterRegular;
+    color: #ffffffbe;
     margin: 10px 0px;
 }
 
