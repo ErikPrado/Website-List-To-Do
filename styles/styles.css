@@ -572,19 +572,6 @@ main .color-window .bg{
     background-size: cover;
 }
 
-.b-background-car-yellow{
-    background-image: url(../img/background-car-yellow.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.b-background-work-table{
-    background-image: url(../img/background-work-table.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .b-background-nature-1{
     background-image: url(../img/background-nature-1.jpg);
@@ -600,12 +587,6 @@ main .color-window .bg{
     background-size: cover;
 }
 
-.b-background-nature-3{
-    background-image: url(../img/background-nature-3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 /* Parte de informações do main (INFO) */
 
@@ -799,8 +780,38 @@ main .task-container-content .task-line-decoration{
 
 
 /* Tarefas Prontas (CHECK) */
+
 main .check .task-container-size{
     background-color: rgb(47, 138, 47);
+}
+
+main .check i{
+    color: rgb(3, 88, 3);
+}
+
+main .icon-task{
+    width: 20px;
+    height: 20px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .icon-task i{
+    font-size: 16px;
+    color: #FFF;
+    visibility: hidden;
+    margin-right: 5px;
+}
+
+main .check .icon-task i{
+    visibility: visible;
+}
+
+main .check .icon-task{
+    background-color: rgb(3, 88, 3);
 }
 
 main .bi-check-circle-fill{

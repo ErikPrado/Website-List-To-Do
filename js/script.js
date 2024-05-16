@@ -78,7 +78,9 @@ function adicionar(){
                 <div class="task-line-decoration"></div>
     <div class="task-container-size" onclick="ativar(${contador})">
                 <div class="f-column">
-                    <i id="icone_${contador}" class="bi bi-circle-fill"></i>
+                    <div id="icone_${contador}" class="icon-task">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
                 </div>
                 <div class="s-column" ">
                     <p class="task"> ${taskTxt} </p>
@@ -140,8 +142,15 @@ function del(id){
 // >>>>>>>>>>>>>>> Função de marcar uma tarefa como pronta.
 function ativar(id){
     var item = document.getElementById(id);
-    item.classList.toggle('check')
+
+
+    item.classList.toggle('check');
     item.parentNode.appendChild(item);
+
+}
+
+
+    
 
     /*
     item.classList.add('check');
@@ -152,11 +161,6 @@ function ativar(id){
 
 
     */
-
-
-
-
-}
 // >>>>>>>>>>>>>>> Função de marcar uma tarefa como pronta.
 
 
@@ -236,13 +240,6 @@ function ocean(){
     mainTheme.setAttribute("class", "b-background-ocean")
 }
 
-function work(){
-    mainTheme.setAttribute("class", "b-background-work-table")
-}
-
-function car(){
-    mainTheme.setAttribute("class", "b-background-car-yellow")
-}
 
 function nature1(){
     mainTheme.setAttribute("class", "b-background-nature-1")
@@ -251,11 +248,6 @@ function nature1(){
 function nature2(){
     mainTheme.setAttribute("class", "b-background-nature-2")
 }
-
-function nature3(){
-    mainTheme.setAttribute("class", "b-background-nature-3")
-}
-
 // >>>>>>>>>>>>>>> Função de alterar o plano de fundo.
 
 
