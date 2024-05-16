@@ -1,8 +1,13 @@
 let contador = 0;
 
-
+// >>>>>>>>>>>>>>> Icone Default.
 var circlePhotoProfile = window.document.getElementById('circlePhotoProfile');
 circlePhotoProfile.setAttribute("class", "b-icon-pic-2")
+// >>>>>>>>>>>>>>> Icone Default.
+
+
+
+
 
 // >>>>>>>>>>>>>>> Data atual no menu.
 var data = new Date()
@@ -26,9 +31,14 @@ txtTime.innerHTML=`${diaSemana}, ${diaDoMes} de ${mesEscrito} de ${ano}.`
 
 
 
+
+
+// >>>>>>>>>>>>>>> Div sem task input automatico
 function autoInput(){
     inputTaskTxt.focus();
 }
+// >>>>>>>>>>>>>>> Div sem task input automatico
+
 
 
 
@@ -151,19 +161,6 @@ function ativar(id){
     item.classList.toggle('check');
     item.parentNode.appendChild(item);
 }
-
-
-    
-
-    /*
-    item.classList.add('check');
-
-    var icone = document.getElementById('icone_'+id)
-    icone.classList.remove('bi-circle-fill');
-    icone.classList.add('bi-check-circle-fill');
-
-
-    */
 // >>>>>>>>>>>>>>> Função de marcar uma tarefa como pronta.
 
 
@@ -183,10 +180,6 @@ function changeTheme(){
         colorWindow.style.visibility = "hidden";
     }
 }
-
-
-
-    var mainTheme = window.document.getElementById('main');
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
 
 
@@ -194,7 +187,7 @@ function changeTheme(){
 
 
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
-    var languageWindow = window.document.getElementById('languageWindow');
+var languageWindow = window.document.getElementById('languageWindow');
 function changeLanguage(){
     
     if(languageWindow.style.visibility === "hidden") {
@@ -202,24 +195,7 @@ function changeLanguage(){
     } else {
         languageWindow.style.visibility = "hidden";
     }
-    
-    /*
-
-
-
-
-
-    var buttonLanguage = window.document.getElementById('buttonLanguage');
-    var languageWindow = window.document.getElementById('languageWindow');
-    var infoLanguage = window.document.getElementById('infoLanguage');
-
-    languageWindow.style.visibility='visible';
-    buttonLanguage.style.background='#ffffff49';
-    infoLanguage.style.visibility='hidden';
-    */
 }
-    var mainTheme = window.document.getElementById('main');
-    
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
 
 
@@ -293,7 +269,7 @@ var pBackgroundTheme = window.document.getElementById('pBackgroundTheme');
 var pLangagues = window.document.getElementById('pLangagues');
 var hLangagues = window.document.getElementById('hLangagues');
 var pThemes = window.document.getElementById('pThemes');
-
+var pIcons = window.document.getElementById('pIcons');
 
 function translateEnglish(){
     version.innerHTML = "Version 1.07";
@@ -307,7 +283,8 @@ function translateEnglish(){
     pBackgroundTheme.innerHTML = "Background themes"
     pLangagues.innerHTML = "Languages";
     hLangagues.innerHTML = "Languages";
-    pThemes.innerHTML = "Themes";
+    pThemes.innerHTML = "Personalize";
+    pIcons.innerHTML = "Profile icons";
 
     var data = new Date()
 
@@ -344,7 +321,8 @@ function translateEspanol(){
     pBackgroundTheme.innerHTML = "Temas de fondo"
     pLangagues.innerHTML = "Línguas";
     hLangagues.innerHTML = "Línguas";
-    pThemes.innerHTML = "Temas";
+    pThemes.innerHTML = "Personalizar";
+    pIcons.innerHTML = "Iconos de perfil";
 
     var data = new Date()
 
@@ -377,7 +355,8 @@ function translatePortugues(){
     pBackgroundTheme.innerHTML = "Temas de fundo"
     pLangagues.innerHTML = "Idiomas";
     hLangagues.innerHTML = "Idiomas";
-    pThemes.innerHTML = "Temas";
+    pThemes.innerHTML = "Personalizar";
+    pIcons.innerHTML = "Icones de perfil";
 
     var data = new Date()
 
