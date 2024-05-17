@@ -56,6 +56,8 @@ if ((nameUsuario !== "") && (nameUsuario !== null) && (nameUsuario !== undefined
     campoNameUsuario.innerHTML = `${nameUsuario}`
     windowContainer.style.visibility='hidden'
     }
+
+    document.getElementById('inputTaskTxt').placeholder = ` Olá ${nameUsuario}, o que vamos fazer hoje?`;
 };
 // >>>>>>>>>>>>>>> Função de Continuar ao digitar o nome da primeira tela de boas vindas.
 
@@ -270,6 +272,10 @@ var pLangagues = window.document.getElementById('pLangagues');
 var hLangagues = window.document.getElementById('hLangagues');
 var pThemes = window.document.getElementById('pThemes');
 var pIcons = window.document.getElementById('pIcons');
+var h2Welcome = window.document.getElementById('h2Welcome');
+var pDescription = window.document.getElementById('pDescription');
+var pExperience = window.document.getElementById('pExperience');
+var btnContinue = window.document.getElementById('btnContinue');
 
 function translateEnglish(){
     version.innerHTML = "Version 1.07";
@@ -285,6 +291,14 @@ function translateEnglish(){
     hLangagues.innerHTML = "Languages";
     pThemes.innerHTML = "Personalize";
     pIcons.innerHTML = "Profile icons";
+    h2Welcome.innerHTML = "Welcome to the To Do List website.";
+    pDescription.innerHTML = "A website with a simple and objective interface created with the aim of helping you with your daily tasks.";
+    pExperience.innerHTML = "For a full experience please enter your name:";
+    btnContinue = "Continue";
+
+    var inputName = window.document.getElementById('inputName');
+    var nameUsuario = (inputName.value);
+    document.getElementById('inputTaskTxt').placeholder = `Hi ${nameUsuario}, what are we doing today?`;
 
     var data = new Date()
 
@@ -323,6 +337,14 @@ function translateEspanol(){
     hLangagues.innerHTML = "Línguas";
     pThemes.innerHTML = "Personalizar";
     pIcons.innerHTML = "Iconos de perfil";
+    h2Welcome.innerHTML = "Bienvenido al sitio web To Do List."
+    pDescription.innerHTML = "Un sitio web con una interfaz sencilla y objetiva creada con el objetivo de ayudarte en tus tareas diarias.";
+    pExperience.innerHTML = "Para una experiencia completa por favor ingrese su nombre:";
+    btnContinue = "Continuar";
+
+    var inputName = window.document.getElementById('inputName');
+    var nameUsuario = (inputName.value);
+    document.getElementById('inputTaskTxt').placeholder = `Hola ${nameUsuario}, ¿qué hacemos hoy?`;
 
     var data = new Date()
 
@@ -357,6 +379,14 @@ function translatePortugues(){
     hLangagues.innerHTML = "Idiomas";
     pThemes.innerHTML = "Personalizar";
     pIcons.innerHTML = "Icones de perfil";
+    h2Welcome.innerHTML = "Bem-vindo ao site To Do List.";
+    pDescription.innerHTML = "Um WebSite com uma interface simples e objetiva criado com o intuito de ajudar em suas tarefas diárias.";
+    pExperience.innerHTML = "Para uma experiência completa por favor digite o seu nome:";
+    btnContinue = "Continuar";
+
+    var inputName = window.document.getElementById('inputName');
+    var nameUsuario = (inputName.value);
+    document.getElementById('inputTaskTxt').placeholder = ` Olá ${nameUsuario}, o que vamos fazer hoje?`;
 
     var data = new Date()
 
