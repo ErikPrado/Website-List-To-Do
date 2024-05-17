@@ -64,13 +64,14 @@ if ((nameUsuario !== "") && (nameUsuario !== null) && (nameUsuario !== undefined
 
 
 
-
+var contTask = window.document.getElementById('contTask');
 // >>>>>>>>>>>>>>> Função de Adicionar uma tarefa.
 function adicionar(){
     var inputTaskTxt = window.document.getElementById('inputTaskTxt');
     var taskTxt = (inputTaskTxt.value);
     var listTask = window.document.getElementById('areaTask');
     var nothingTask = window.document.getElementById('nothingTaskDiv');
+
 
     let data = new Date();
     let hours = data.getHours();
@@ -85,6 +86,9 @@ function adicionar(){
 
 
     ++contador;
+
+ 
+    contTask.innerHTML = `${contador}`;
 
     if ((taskTxt !== "") && (taskTxt !== null) && (taskTxt !== undefined)){
     var novaTask = `
@@ -151,6 +155,10 @@ var btnContinue = window.document.getElementById('btnContinue')
 function del(id){
     var tarefa = document.getElementById(id);
     tarefa.remove();
+
+    --contador;
+
+    contTask.innerHTML = `${contador}`;
 
 }
 // >>>>>>>>>>>>>>> Função de remover uma tarefa.
@@ -278,7 +286,6 @@ function iconMale2(){
 var version = window.document.getElementById('version');
 var pLocal = window.document.getElementById('pLocal');
 var pSobre = window.document.getElementById('pSobre');
-var pFeedback = window.document.getElementById('pFeedback');
 var myList = window.document.getElementById('myList');
 var noTask = window.document.getElementById('noTask');
 var createTask = window.document.getElementById('createTask');
@@ -293,6 +300,7 @@ var pDescription = window.document.getElementById('pDescription');
 var pExperience = window.document.getElementById('pExperience');
 var btnContinue = window.document.getElementById('btnContinue');
 var inputTaskTxt = window.document.getElementById('inputTaskTxt');
+var btnInfo = window.document.getElementById('btnInfo');
 
 
 
@@ -300,11 +308,10 @@ function translateEnglish(){
     version.innerHTML = "Version 1.07";
     pLocal.innerHTML="Local account";
     pSobre.innerHTML="About the website";
-    pFeedback.innerHTML ="Feedback";
     myList.innerHTML = "My List";
     noTask.innerHTML = "No tasks available."
     createTask.innerHTML = "Create task"
-    add.innerHTML = "To add"
+    add.innerHTML = "Add"
     pBackgroundTheme.innerHTML = "Background themes"
     pLangagues.innerHTML = "Languages";
     hLangagues.innerHTML = "Languages";
@@ -313,6 +320,8 @@ function translateEnglish(){
     h2Welcome.innerHTML = "Welcome to the To Do List website.";
     pDescription.innerHTML = "A website with a simple and objective interface created with the aim of helping you with your daily tasks.";
     pExperience.innerHTML = "For a full experience please enter your name:";
+
+    btnInfo.style.right="3px";
 
     var inputName = window.document.getElementById('inputName');
     var nameUsuario = (inputName.value);
@@ -352,7 +361,6 @@ function translateEspanol(){
     version.innerHTML = "Versión 1.07";
     pLocal.innerHTML="Cuenta local";
     pSobre.innerHTML ="Sobre el sitio web"
-    pFeedback.innerHTML = "Comentario";
     myList.innerHTML = "Mi Lista";
     noTask.innerHTML = "No hay tareas disponibles."
     createTask.innerHTML = "Crear tarea"
@@ -365,6 +373,8 @@ function translateEspanol(){
     h2Welcome.innerHTML = "Bienvenido al sitio web To Do List."
     pDescription.innerHTML = "Un sitio web con una interfaz sencilla y objetiva creada con el objetivo de ayudarte en tus tareas diarias.";
     pExperience.innerHTML = "Para una experiencia completa por favor ingrese su nombre:";
+
+    btnInfo.style.right="-9px";
 
     var inputName = window.document.getElementById('inputName');
     var nameUsuario = (inputName.value);
@@ -401,7 +411,6 @@ function translatePortugues(){
     version.innerHTML = "Versão 1.07";
     pLocal.innerHTML="Conta Local";
     pSobre.innerHTML="Sobre o site";
-    pFeedback.innerHTML = "Feedback";
     myList.innerHTML = "Minha Lista";
     noTask.innerHTML = "Nenhuma tarefa disponível."
     createTask.innerHTML = "Criar Tarefa"
@@ -414,6 +423,8 @@ function translatePortugues(){
     h2Welcome.innerHTML = "Bem-vindo ao site To Do List.";
     pDescription.innerHTML = "Um WebSite com uma interface simples e objetiva criado com o intuito de ajudar em suas tarefas diárias.";
     pExperience.innerHTML = "Para uma experiência completa por favor digite o seu nome:";
+
+    btnInfo.style.right="-17px";
 
     var inputName = window.document.getElementById('inputName');
     var nameUsuario = (inputName.value);
