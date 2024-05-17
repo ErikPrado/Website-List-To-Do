@@ -72,7 +72,6 @@ function adicionar(){
     var listTask = window.document.getElementById('areaTask');
     var nothingTask = window.document.getElementById('nothingTaskDiv');
 
-
     let data = new Date();
     let hours = data.getHours();
     let minutes = data.getMinutes();
@@ -119,7 +118,12 @@ function adicionar(){
     inputTaskTxt.value = "";
     inputTaskTxt.focus();
     }
+
 }
+
+
+
+
 // >>>>>>>>>>>>>>> Função de Adicionar uma tarefa.
 
 
@@ -198,6 +202,18 @@ function changeLanguage(){
         languageWindow.style.visibility = "hidden";
     }
 }
+
+/* 
+var languageWindow1 = window.document.getElementById('languageWindow1');
+function changeLanguage1(){
+    
+    if(languageWindow1.style.visibility === "hidden") {
+        languageWindow1.style.visibility = "visible";
+    } else {
+        languageWindow1.style.visibility = "hidden";
+    }
+}
+*/
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
 
 
@@ -276,6 +292,9 @@ var h2Welcome = window.document.getElementById('h2Welcome');
 var pDescription = window.document.getElementById('pDescription');
 var pExperience = window.document.getElementById('pExperience');
 var btnContinue = window.document.getElementById('btnContinue');
+var inputTaskTxt = window.document.getElementById('inputTaskTxt');
+
+
 
 function translateEnglish(){
     version.innerHTML = "Version 1.07";
@@ -294,11 +313,17 @@ function translateEnglish(){
     h2Welcome.innerHTML = "Welcome to the To Do List website.";
     pDescription.innerHTML = "A website with a simple and objective interface created with the aim of helping you with your daily tasks.";
     pExperience.innerHTML = "For a full experience please enter your name:";
-    btnContinue = "Continue";
 
     var inputName = window.document.getElementById('inputName');
     var nameUsuario = (inputName.value);
+
+    document.getElementById('inputName').placeholder ="Name:";
+
     document.getElementById('inputTaskTxt').placeholder = `Hi ${nameUsuario}, what are we doing today?`;
+
+    document.getElementById('btnContinue').innerHTML="Continue";
+
+    document.title = "To-Do List";
 
     var data = new Date()
 
@@ -340,11 +365,15 @@ function translateEspanol(){
     h2Welcome.innerHTML = "Bienvenido al sitio web To Do List."
     pDescription.innerHTML = "Un sitio web con una interfaz sencilla y objetiva creada con el objetivo de ayudarte en tus tareas diarias.";
     pExperience.innerHTML = "Para una experiencia completa por favor ingrese su nombre:";
-    btnContinue = "Continuar";
 
     var inputName = window.document.getElementById('inputName');
     var nameUsuario = (inputName.value);
     document.getElementById('inputTaskTxt').placeholder = `Hola ${nameUsuario}, ¿qué hacemos hoy?`;
+
+    document.getElementById('inputName').placeholder ="Nome:";
+
+
+    document.getElementById('btnContinue').innerHTML="Continuar";
 
     var data = new Date()
 
@@ -363,9 +392,12 @@ function translateEspanol(){
 
     let txtTime = window.document.getElementById('txtTime');
     txtTime.innerHTML=`${diaSemana}, ${diaDoMes} de ${mesEscrito} de ${ano}.`
+
+    document.title = "Lista de Quehaceres";
 }
 
 function translatePortugues(){
+    document.getElementById('inputTaskTxt').placeholder = ` Olá ${nameUsuario}, o que vamos fazer hoje?`;
     version.innerHTML = "Versão 1.07";
     pLocal.innerHTML="Conta Local";
     pSobre.innerHTML="Sobre o site";
@@ -382,11 +414,18 @@ function translatePortugues(){
     h2Welcome.innerHTML = "Bem-vindo ao site To Do List.";
     pDescription.innerHTML = "Um WebSite com uma interface simples e objetiva criado com o intuito de ajudar em suas tarefas diárias.";
     pExperience.innerHTML = "Para uma experiência completa por favor digite o seu nome:";
-    btnContinue = "Continuar";
 
     var inputName = window.document.getElementById('inputName');
     var nameUsuario = (inputName.value);
-    document.getElementById('inputTaskTxt').placeholder = ` Olá ${nameUsuario}, o que vamos fazer hoje?`;
+
+
+    document.getElementById('inputTaskTxt').placeholder = `Olá ${nameUsuario}, o que vamos fazer hoje?`;
+
+    document.getElementById('inputName').placeholder ="Nome:";
+
+    document.getElementById('btnContinue').innerHTML="Continuar";
+
+    document.title= "Lista de Tarefa";
 
     var data = new Date()
 

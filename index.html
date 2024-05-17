@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="eng">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> To-Do List | Lista de Tarefas </title>
+    <title id="titleWeb"> To-Do List </title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
@@ -19,21 +19,30 @@
             <div class="content-box">
                 <div class="f-line">
                     <h2 id="h2Welcome"> Bem-vindo ao site To Do List.</h2>
-
-
-                    <button class="btn-lng-welcome">
+<!-- 
+                    <button class="button-size-g-language" onclick="changeLanguage1()" >
                         <i class="bi bi-translate"></i>
-
+                        
                         <div class="info-Language" id="infoLanguage">
                             <p id="pLangagues"> Idiomas </p>
                         </div>
-
-
-
-
-                        
-
-                    </button>
+    
+                        <div class="language-window" id="languageWindow1">
+                            <h3 id="hLangagues"> Idiomas </h3>
+                                <div class="language-size" onclick="translateEnglish()">
+                                    <div class="flag-size usa"> </div>
+                                    <p> English - USA </p>
+                                </div>
+                                <div class="language-size" onclick="translateEspanol()">
+                                    <div class="flag-size es"> </div>
+                                    <p> Español - ES </p>
+                                </div>
+                                <div class="language-size" onclick="translatePortugues()">
+                                    <div class="flag-size br"> </div>
+                                    <p> Português - BR </p>
+                                </div>
+                        </div>
+                    </button> -->
                     
                 </div>
 
@@ -158,7 +167,7 @@
             <div class="s-column">
 
 
-                <button class="button-size-g-language" id="buttonLanguage" onclick="changeLanguage()" >
+                <button class="button-size-g-language" onclick="changeLanguage()" >
                     <i class="bi bi-translate"></i>
                     
                     <div class="info-Language" id="infoLanguage">

@@ -46,51 +46,6 @@ body{ display: flex; }
     justify-content: space-between;
 }
 
-.window-welcome-container .content-box .f-line .btn-lng-welcome{
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background-color: #e0e0e0;
-}
-
-.window-welcome-container .content-box .f-line .btn-lng-welcome:hover{
-    transition: .2s;
-    background-color: #cccccc;
-}
-
-.window-welcome-container .content-box .f-line .btn-lng-welcome i{
-    color: #000;
-    font-size: 20px;
-    margin-top: 2px;
-}
-
-.window-welcome-container .content-box .f-line .btn-lng-welcome .info-Language{
-    background-color: #cccccc;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    color: #000;
-    font-size: 15px;
-    font-family: InterSemiBold;
-    position: absolute;
-    bottom: -25px;
-    visibility: hidden;
-
-}
-
-.window-welcome-container .content-box .f-line .btn-lng-welcome:hover .info-Language{
-    visibility: visible;
-    bottom: -35px;
-    transition: .2s ease;
-}
 
 
 
@@ -170,7 +125,7 @@ border-bottom: 3px solid #1e8bc2;
     border-radius: 5px;
     padding: 12px 30px;
     font-size: 15px;
-    font-family: InterExtraBold;
+    font-family: InterBold;
     margin-left: 8px;
     cursor: pointer;
 }
@@ -187,6 +142,35 @@ border-bottom: 3px solid #1e8bc2;
     justify-content: center;
     align-items: center;
 }
+
+.window-welcome-container .button-size-g-language i {
+    color: #000;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.window-welcome-container .button-size-g-language{
+    background-color: #cecece54;
+}
+
+.window-welcome-container .button-size-g-language:hover{
+    background-color: #FFF;
+}
+
+
+.button-size-g-language-w{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: #ffffff00;
+}
+
 /* >>>>>>>>>>>>>>> 1ª Parte - Tela de apresentação (BEM-VINDO) <<<<<<<<<<<<<<< */
 
 
@@ -387,7 +371,7 @@ main .info-size-container .s-column{
     gap: 15px;
 }
 
-main .info-size-container .s-column .button-size-g-language{
+.button-size-g-language{
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -400,7 +384,7 @@ main .info-size-container .s-column .button-size-g-language{
     background-color: #ffffff00;
 }
 
-main .language-window{
+.language-window{
     position: absolute;
     width: 200px;
     background-color: rgba(255, 255, 255, 0.212);
@@ -418,7 +402,7 @@ main .language-window{
     visibility: hidden;
 }
 
-main .language-size{
+.language-size{
     align-items: center;
     display: flex;
     gap: 5px;
@@ -428,58 +412,73 @@ main .language-size{
     border-radius: 5px;
 }
 
-main .language-size:hover{
+.language-size:hover{
     background-color: #e9e9e9;
 }
 
-main .language-size p{
+.language-size p{
     color: #000;
     font-size: 14px;
     font-family: InterSemiBold;
     margin-left: 5px;
 }
 
-main .language-size .flag-size{
+.language-size .flag-size{
     width: 45px;
     height: 30px;
     border-radius: 5px;
 }
 
-main .language-size .flag-size.usa{
+.language-size .flag-size.usa{
     background-image: url(../img/flag-usa.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-main .language-size .flag-size.es{
+.language-size .flag-size.es{
     background-image: url(../img/flag-espan.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-main .language-size .flag-size.br{
+.language-size .flag-size.br{
     background-image: url(../img/flag-br.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-main .info-size-container .s-column .button-size-g-language:hover .info-Language{
+.button-size-g-language:hover .info-Language{
     visibility: visible;
     bottom: -35px;
     transition: .2s ease;
 }
 
-main .info-size-container .s-column .button-size-g-language:hover{
+.button-size-g-language:hover{
     background-color: #ffffff49;
     transition: .2s;
 }
 
-main .info-size-container .s-column .button-size-g-language i {
+.button-size-g-language i {
     color: #FFF;
     margin-right: 6px;
+}
+
+.info-Language{
+    background-color: #FFF;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #000;
+    font-size: 15px;
+    font-family: InterSemiBold;
+    position: absolute;
+    bottom: -25px;
+    visibility: hidden;
 }
 
 main .info-size-container .s-column .button-size-g{
@@ -528,21 +527,6 @@ main .info-size-container .s-column .button-size-g:hover .info-color{
     visibility: visible;
     bottom: -35px;
     transition: .2s ease;
-}
-
-main .info-size-container .info-Language{
-    background-color: #FFF;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    color: #000;
-    font-size: 15px;
-    font-family: InterSemiBold;
-    position: absolute;
-    bottom: -25px;
-    visibility: hidden;
 }
 
 main .info-size-container .info-color{
