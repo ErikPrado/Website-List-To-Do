@@ -1,4 +1,4 @@
-let contador = 0;
+var contador = 0;
 
 // >>>>>>>>>>>>>>> Icone Default.
 var circlePhotoProfile = window.document.getElementById('circlePhotoProfile');
@@ -84,8 +84,8 @@ function adicionar(){
     
     
 
-
     ++contador;
+    
 
  
     contTask.innerHTML = `${contador}`;
@@ -116,6 +116,8 @@ function adicionar(){
             </div>
         </div>
     `
+
+
     nothingTask.style.display='none';
     listTask.innerHTML +=  novaTask    
     
@@ -124,13 +126,7 @@ function adicionar(){
     }
 
 }
-
-
-
-
 // >>>>>>>>>>>>>>> Função de Adicionar uma tarefa.
-
-
 
 
 
@@ -210,18 +206,6 @@ function changeLanguage(){
         languageWindow.style.visibility = "hidden";
     }
 }
-
-/* 
-var languageWindow1 = window.document.getElementById('languageWindow1');
-function changeLanguage1(){
-    
-    if(languageWindow1.style.visibility === "hidden") {
-        languageWindow1.style.visibility = "visible";
-    } else {
-        languageWindow1.style.visibility = "hidden";
-    }
-}
-*/
 // >>>>>>>>>>>>>>> Função de abir o painel de plano de fundo.
 
 
@@ -301,13 +285,13 @@ var pExperience = window.document.getElementById('pExperience');
 var btnContinue = window.document.getElementById('btnContinue');
 var inputTaskTxt = window.document.getElementById('inputTaskTxt');
 var btnInfo = window.document.getElementById('btnInfo');
+var myListMin = window.document.getElementById('myListMin');
 
 
 
 function translateEnglish(){
     version.innerHTML = "Version 1.07";
     pLocal.innerHTML="Local account";
-    pSobre.innerHTML="About the website";
     myList.innerHTML = "My List";
     noTask.innerHTML = "No tasks available."
     createTask.innerHTML = "Create task"
@@ -320,6 +304,7 @@ function translateEnglish(){
     h2Welcome.innerHTML = "Welcome to the To Do List website.";
     pDescription.innerHTML = "A website with a simple and objective interface created with the aim of helping you with your daily tasks.";
     pExperience.innerHTML = "For a full experience please enter your name:";
+    myListMin.innerHTML = "My List";
 
     btnInfo.style.right="3px";
 
@@ -351,16 +336,11 @@ function translateEnglish(){
     
     let txtTime = window.document.getElementById('txtTime');
     txtTime.innerHTML=`${diaSemana}, ${diaDoMes} ${mesEscrito}, ${ano}.`
-
-
-
-
 }
 
 function translateEspanol(){
     version.innerHTML = "Versión 1.07";
     pLocal.innerHTML="Cuenta local";
-    pSobre.innerHTML ="Sobre el sitio web"
     myList.innerHTML = "Mi Lista";
     noTask.innerHTML = "No hay tareas disponibles."
     createTask.innerHTML = "Crear tarea"
@@ -373,6 +353,7 @@ function translateEspanol(){
     h2Welcome.innerHTML = "Bienvenido al sitio web To Do List."
     pDescription.innerHTML = "Un sitio web con una interfaz sencilla y objetiva creada con el objetivo de ayudarte en tus tareas diarias.";
     pExperience.innerHTML = "Para una experiencia completa por favor ingrese su nombre:";
+    myListMin.innerHTML = "Mi Lista";
 
     btnInfo.style.right="-9px";
 
@@ -410,7 +391,6 @@ function translatePortugues(){
     document.getElementById('inputTaskTxt').placeholder = ` Olá ${nameUsuario}, o que vamos fazer hoje?`;
     version.innerHTML = "Versão 1.07";
     pLocal.innerHTML="Conta Local";
-    pSobre.innerHTML="Sobre o site";
     myList.innerHTML = "Minha Lista";
     noTask.innerHTML = "Nenhuma tarefa disponível."
     createTask.innerHTML = "Criar Tarefa"
@@ -423,6 +403,7 @@ function translatePortugues(){
     h2Welcome.innerHTML = "Bem-vindo ao site To Do List.";
     pDescription.innerHTML = "Um WebSite com uma interface simples e objetiva criado com o intuito de ajudar em suas tarefas diárias.";
     pExperience.innerHTML = "Para uma experiência completa por favor digite o seu nome:";
+    myListMin.innerHTML = "Minha Lista";
 
     btnInfo.style.right="-17px";
 

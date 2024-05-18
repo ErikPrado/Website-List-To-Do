@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,45 +14,11 @@
 
 
 <body>
-    <div class="about-window-container-size">
-
-
-
-                                    
-    </div>
-
-
-
     <div class="window-welcome-container" id="windowContainer" >
         <div class="welcome-size">
             <div class="content-box">
                 <div class="f-line">
                     <h2 id="h2Welcome"> Bem-vindo ao site To Do List.</h2>
-<!-- 
-                    <button class="button-size-g-language" onclick="changeLanguage1()" >
-                        <i class="bi bi-translate"></i>
-                        
-                        <div class="info-Language" id="infoLanguage">
-                            <p id="pLangagues"> Idiomas </p>
-                        </div>
-    
-                        <div class="language-window" id="languageWindow1">
-                            <h3 id="hLangagues"> Idiomas </h3>
-                                <div class="language-size" onclick="translateEnglish()">
-                                    <div class="flag-size usa"> </div>
-                                    <p> English - USA </p>
-                                </div>
-                                <div class="language-size" onclick="translateEspanol()">
-                                    <div class="flag-size es"> </div>
-                                    <p> Español - ES </p>
-                                </div>
-                                <div class="language-size" onclick="translatePortugues()">
-                                    <div class="flag-size br"> </div>
-                                    <p> Português - BR </p>
-                                </div>
-                        </div>
-                    </button> -->
-                    
                 </div>
 
                 <div class="s-line">
@@ -139,7 +105,7 @@
                 <i class="bi bi-check-all"></i>
             </div>
             <div class="s-column">
-                <p> Minha Lista </p>
+                <p id="myListMin"> Minha Lista </p>
             </div>
             <div class="t-column">
                 <div class="circle-number">
@@ -149,135 +115,115 @@
         </div>
 
         <div class="line-decoration"></div>
-
-        
     </header>
 
 
     <main id="main">
-        <div class="info-size-container">
-            <div class="f-column">
-            <h2 id="myList"> Minha Lista </h2>
-            <p class="date" id="txtTime"> </p>    
-            </div>
-            <div class="s-column">
+        <div class="size-main">
+            <div class="info-size-container">
+                <div class="f-column">
+                <h2 id="myList"> Minha Lista </h2>
+                <p class="date" id="txtTime"> </p>    
+                </div>
+                <div class="s-column">
 
 
-                <button class="button-size-g-language" onclick="changeLanguage()" >
-                    <i class="bi bi-translate"></i>
-                    
-                    <div class="info-Language" id="infoLanguage">
-                        <p id="pLangagues"> Idiomas </p>
-                    </div>
+                    <button class="button-size-g-language" onclick="changeLanguage()" >
+                        <i class="bi bi-translate"></i>
+                        
+                        <div class="info-Language" id="infoLanguage">
+                            <p id="pLangagues"> Idiomas </p>
+                        </div>
 
-                    <div class="language-window" id="languageWindow">
-                        <h3 id="hLangagues"> Idiomas </h3>
-                            <div class="language-size" onclick="translateEnglish()">
-                                <div class="flag-size usa"> </div>
-                                <p> English - USA </p>
-                            </div>
-                            <div class="language-size" onclick="translateEspanol()">
-                                <div class="flag-size es"> </div>
-                                <p> Español - ES </p>
-                            </div>
-                            <div class="language-size" onclick="translatePortugues()">
-                                <div class="flag-size br"> </div>
-                                <p> Português - BR </p>
-                            </div>
-                    </div>
-                </button>
-
-                <button class="button-size-g" id="buttonTheme" onclick="changeTheme()">
-                    <i class="bi bi-palette-fill"></i>
-                        <div class="color-window" id="colorWindow">
-                            <h3 id="pBackgroundTheme"> Temas de fundo </h3>
-                                <div class="f-column">
-                                    <div class="bg red-bg" onclick="red()"></div>
-                                    <div class="bg orange-bg" onclick="orange()"></div>
-                                    <div class="bg pink-bg" onclick="pink()"></div>
+                        <div class="language-window" id="languageWindow">
+                            <h3 id="hLangagues"> Idiomas </h3>
+                                <div class="language-size" onclick="translateEnglish()">
+                                    <div class="flag-size usa"> </div>
+                                    <p> English - USA </p>
                                 </div>
-
-                                <div class="f-column">
-                                    <div class="bg b-background-nature-1" onclick="nature1()"></div>
-                                    <div class="bg b-background-ocean" onclick="ocean()"></div>
-                                    <div class="bg b-background-nature-2" onclick="nature2()"></div>
+                                <div class="language-size" onclick="translateEspanol()">
+                                    <div class="flag-size es"> </div>
+                                    <p> Español - ES </p>
                                 </div>
+                                <div class="language-size" onclick="translatePortugues()">
+                                    <div class="flag-size br"> </div>
+                                    <p> Português - BR </p>
+                                </div>
+                        </div>
+                    </button>
 
-                            <h3 id="pIcons" class="spc-top"> Icones de perfil </h3>
-                            <div class="f-column">
-                                <div class="bg b-icon-pic-1" onclick="iconPic1()"></div>
-                                <div class="bg b-icon-female-pic-1" onclick="iconFemale1()"></div>
-                                <div class="bg b-icon-female-pic-2" onclick="iconFemale2()"></div>
+                    <button class="button-size-g" id="buttonTheme" onclick="changeTheme()">
+                        <i class="bi bi-palette-fill"></i>
+                            <div class="color-window" id="colorWindow">
+                                <h3 id="pBackgroundTheme"> Temas de fundo </h3>
+                                    <div class="f-column">
+                                        <div class="bg red-bg" onclick="red()"></div>
+                                        <div class="bg orange-bg" onclick="orange()"></div>
+                                        <div class="bg pink-bg" onclick="pink()"></div>
+                                    </div>
+
+                                    <div class="f-column">
+                                        <div class="bg b-background-nature-1" onclick="nature1()"></div>
+                                        <div class="bg b-background-ocean" onclick="ocean()"></div>
+                                        <div class="bg b-background-nature-2" onclick="nature2()"></div>
+                                    </div>
+
+                                <h3 id="pIcons" class="spc-top"> Icones de perfil </h3>
+                                <div class="f-column">
+                                    <div class="bg b-icon-pic-1" onclick="iconPic1()"></div>
+                                    <div class="bg b-icon-female-pic-1" onclick="iconFemale1()"></div>
+                                    <div class="bg b-icon-female-pic-2" onclick="iconFemale2()"></div>
+                                </div>
+                                <div class="f-column">
+                                    <div class="bg b-icon-pic-2" onclick="iconPic2()"></div>
+                                    <div class="bg b-icon-male-pic-1" onclick="iconMale1()"></div>
+                                    <div class="bg b-icon-male-pic-2" onclick="iconMale2()"></div>
+                                </div>
                             </div>
-                            <div class="f-column">
-                                <div class="bg b-icon-pic-2" onclick="iconPic2()"></div>
-                                <div class="bg b-icon-male-pic-1" onclick="iconMale1()"></div>
-                                <div class="bg b-icon-male-pic-2" onclick="iconMale2()"></div>
-                            </div>
+                        <div class="info-color" id="infoThemes">
+                            <p id="pThemes"> Personalizar </p>
                         </div>
-                    <div class="info-color" id="infoThemes">
-                        <p id="pThemes"> Personalizar </p>
-                    </div>
-                    </button>
-
-                    <button class="button-size-g-DkLg">
-                        <i class="bi bi-info-circle-fill"></i>
-    
-    
-    
-                        <div class="info-DkLgMode">
-                            <p> Sobre </p>
-                        </div>
-                    </button>
-
-                    <button class="button-size-g-DkLg">
-                        <div class="img-box figma"> </div>
-    
-    
-    
-                        <div class="info-DkLgMode">
-                            <p> Figma </p>
-                        </div>
-                    </button>
-
-                    <button class="button-size-g-DkLg">
-                        <i class="bi bi-github"></i>
-    
-    
-    
-                        <div class="info-DkLgMode">
-                            <p> GitHub </p>
-                        </div>
-                    </button>
-            </div>
-        </div>
-        
-        <div class="line-decoration"></div>
-
-        <div class="input-container">
-            <input type="text" name="" class="input-txt" id="inputTaskTxt" placeholder="O que vamos fazer hoje?" autocomplete="off">
-            <button class="enviar" onclick="adicionar()" id="btnAdd"> 
-                <svg class="icon-btn" width="30" height="30" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.6378 34.9922V0.588776H21.4432V34.9922H13.6378ZM0.338778 21.6932V13.8878H34.7422V21.6932H0.338778Z" fill="white"/>
-                    </svg>
-                    <div class="btn-info" id="btnInfo">
-                        <p id="add"> Adicionar </p>
-                    </div>
-            </button>
-            
-        </div>
-
-        <div class="list-task-size" id="areaTask"> 
-
-            <div class="no-task-size-container" id="nothingTaskDiv">
-                <div class="no-task-size" > 
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p class="task-off" id="noTask"> Nenhuma tarefa disponível. </p>
-                        <button class="off" onclick="autoInput()" id="createTask">
-                            Criar tarefa
                         </button>
-                    
-                    </div>
+
+
+
+                        <button class="button-size-g-language">
+                            <i class="bi bi-info-circle-fill "></i>
+                            
+                            <div class="info-Language" id="infoLanguage">
+                                <p> Sobre </p>
+                            </div>
+                        </button>
+                </div>
+            </div>
+            
+            <div class="line-decoration"></div>
+
+            <div class="input-container">
+                <input type="text" name="" class="input-txt" id="inputTaskTxt" placeholder="O que vamos fazer hoje?" autocomplete="off">
+                <button class="enviar" onclick="adicionar()" id="btnAdd"> 
+                    <svg class="icon-btn" width="30" height="30" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6378 34.9922V0.588776H21.4432V34.9922H13.6378ZM0.338778 21.6932V13.8878H34.7422V21.6932H0.338778Z" fill="white"/>
+                        </svg>
+                        <div class="btn-info" id="btnInfo">
+                            <p id="add"> Adicionar </p>
+                        </div>
+                </button>
+                
+            </div>
+
+            <div class="list-task-size" id="areaTask"> 
+
+                <div class="no-task-size-container" id="nothingTaskDiv">
+                    <div class="no-task-size" > 
+                            <i class="bi bi-check-circle-fill"></i>
+                            <p class="task-off" id="noTask"> Nenhuma tarefa disponível. </p>
+                            <button class="off" onclick="autoInput()" id="createTask">
+                                Criar tarefa
+                            </button>
+                        
+                        </div>
+                </div>
             </div>
         </div>
     </main>   

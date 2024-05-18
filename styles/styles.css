@@ -170,6 +170,7 @@ border-bottom: 3px solid #1e8bc2;
     border: none;
     background-color: #ffffff00;
 }
+
 /* >>>>>>>>>>>>>>> 1ª Parte - Tela de apresentação (BEM-VINDO) <<<<<<<<<<<<<<< */
 
 
@@ -332,10 +333,11 @@ header .task-window .t-column .circle-number p{
     background-repeat: no-repeat;
 }
 
-
-header .href{
-    display: flex;
-    align-items: center;
+.size-main{
+    width: 100%;
+    height: 100%;
+    max-width: 1720px;
+    margin: 0 auto;
 }
 
 header .version{
@@ -524,7 +526,7 @@ main .info-size-container .s-column .button-size-g{
     background-color: #ffffff00;
 }
 
-main .info-size-container .s-column .button-size-g-DkLg{
+.button-size-g-DkLg{
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -534,20 +536,50 @@ main .info-size-container .s-column .button-size-g-DkLg{
     cursor: pointer;
     position: relative;
     border: none;
-    background-color: #ffffff00;
+    background-color: #a1000000;
+}
+.button-size-g-info{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: #a1000000;
 }
 
-main .info-size-container .s-column .button-size-g-DkLg i{
-    color: #FFF;
-    margin-right: 6px;
+.button-size-g-info i{
+    color: #000;
+    font-size: 20px;
 }
 
-main .info-size-container .s-column .button-size-g-DkLg:hover{
-    background-color: #ffffff49;
+header .button-size-g-DkLg{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: #ebe9e9;
+}
+
+.button-size-g-DkLg i{
+    color: #000;
+    font-size: 20px;
+}
+
+.button-size-g-DkLg:hover{
+    background-color: rgba(214, 214, 214, 0.286);
     transition: .2s;
 }
 
-main .info-size-container .s-column .button-size-g-DkLg:hover .info-DkLgMode{
+.button-size-g-DkLg:hover .info-DkLgMode{
     visibility: visible;
     bottom: -35px;
     transition: .2s ease;
@@ -574,8 +606,8 @@ main .info-size-container .info-color{
     visibility: hidden;
 }
 
-main .info-size-container .info-DkLgMode{
-    background-color: #FFF;
+.info-DkLgMode{
+    background-color: #ebe9e9;
     padding: 5px 10px;
     display: flex;
     align-items: center;
