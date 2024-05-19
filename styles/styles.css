@@ -26,8 +26,6 @@ body{ display: flex; }
 }
 
 .window-welcome-container .welcome-size{
-    width: 800px;
-    height: 400px;
     background-color: #EEEDED;
     border-radius: 10px;
     padding: 30px;
@@ -52,14 +50,19 @@ body{
 }
 
 
+@media screen and (max-width:840px ){
+    .window-welcome-container .welcome-size .s-line{
+        flex-direction: column;
+    }
+    .svg{
+        display: none;
+    }
+}
+
 
 
 @media screen and (max-width: 930px) {
     header{
-        display: none;
-    }
-
-    .window-welcome-container{
         display: none;
     }
 
@@ -68,6 +71,27 @@ body{
     }
 }
 
+@media screen and (max-width: 550px) {
+    .break{
+        display: block;
+    }
+
+    .window-welcome-container .welcome-size .f-column p{
+        width: 250px;
+        margin-top: 30px;
+    }
+
+    .window-welcome .input-name{
+        width: 20000px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    main {
+        padding: 0px 0px 0px 0px;
+    }
+    
+}
 
 @media screen and (max-width: 520px) {
     .info-size-container{
@@ -90,6 +114,10 @@ body{
         overflow-y: hidden;
         overflow-x: hidden;
     }
+
+    .window-welcome-container .welcome-size .f-column p{
+    margin-top: 35px;
+    }
 }
 
 
@@ -104,8 +132,8 @@ body{
 
 .window-welcome-container .welcome-size .s-line{
     width: 100%;
-    height: calc((100% - 40px));
     display: flex;
+    margin-top: 10px;
 }
 
 .window-welcome-container .welcome-size .s-line .f-column{
@@ -130,8 +158,11 @@ body{
     font-size: 16px;
     font-family: InterMedium;
     color: #777777;
-    width: 350px;
-    margin: 5px 0px;
+
+}
+
+.window-welcome-container .welcome-size .f-column .spc{
+    margin-top: 50px;
 }
 
 .window-welcome-container .welcome-size .f-column input{
@@ -146,6 +177,12 @@ body{
     color: #8f8f8f;
     position: relative;
 }
+
+.content{
+    margin-top: 10px;
+    display: flex;
+}
+
 .window-welcome-container .welcome-size .f-column input:hover{
     border-bottom: 3px solid #0774ab62;
 }
