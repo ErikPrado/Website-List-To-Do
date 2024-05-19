@@ -168,16 +168,18 @@
                                         <div class="bg b-background-nature-2" onclick="nature2()"></div>
                                     </div>
 
-                                <h3 id="pIcons" class="spc-top"> Icones de perfil </h3>
-                                <div class="f-column">
-                                    <div class="bg b-icon-pic-1" onclick="iconPic1()"></div>
-                                    <div class="bg b-icon-female-pic-1" onclick="iconFemale1()"></div>
-                                    <div class="bg b-icon-female-pic-2" onclick="iconFemale2()"></div>
-                                </div>
-                                <div class="f-column">
-                                    <div class="bg b-icon-pic-2" onclick="iconPic2()"></div>
-                                    <div class="bg b-icon-male-pic-1" onclick="iconMale1()"></div>
-                                    <div class="bg b-icon-male-pic-2" onclick="iconMale2()"></div>
+                                <div class="icons-size">
+                                    <h3 id="pIcons" class="spc-top"> Icones de perfil </h3>
+                                    <div class="f-column">
+                                        <div class="bg b-icon-pic-1" onclick="iconPic1()"></div>
+                                        <div class="bg b-icon-female-pic-1" onclick="iconFemale1()"></div>
+                                        <div class="bg b-icon-female-pic-2" onclick="iconFemale2()"></div>
+                                    </div>
+                                    <div class="f-column">
+                                        <div class="bg b-icon-pic-2" onclick="iconPic2()"></div>
+                                        <div class="bg b-icon-male-pic-1" onclick="iconMale1()"></div>
+                                        <div class="bg b-icon-male-pic-2" onclick="iconMale2()"></div>
+                                    </div>
                                 </div>
                             </div>
                         <div class="info-color" id="infoThemes">
@@ -211,33 +213,36 @@
             
             <div class="line-decoration" onclick="closeWindow()"></div>
 
-            <div class="input-container" onclick="closeWindow()">
-                <input type="text" name="" class="input-txt" id="inputTaskTxt" placeholder="O que vamos fazer hoje?" autocomplete="off">
-                <button class="enviar" onclick="adicionar()" id="btnAdd"> 
-                    <svg class="icon-btn" width="30" height="30" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.6378 34.9922V0.588776H21.4432V34.9922H13.6378ZM0.338778 21.6932V13.8878H34.7422V21.6932H0.338778Z" fill="white"/>
-                        </svg>
-                        <div class="btn-info" id="btnInfo">
-                            <p id="add"> Adicionar </p>
-                        </div>
-                </button>
-                
-            </div>
+            <div class="content-size-max">
 
-            <div class="list-task-size" id="areaTask" onclick="closeWindow()"> 
-
-                <div class="no-task-size-container" id="nothingTaskDiv">
-                    <div class="no-task-size" > 
-                            <i class="bi bi-check-circle-fill"></i>
-                            <p class="task-off" id="noTask"> Nenhuma tarefa disponível. </p>
-                            <button class="off" onclick="autoInput()" id="createTask">
-                                Criar tarefa
-                            </button>
+                    <div class="input-container" onclick="closeWindow()">
+                        <input type="text" name="" class="input-txt" id="inputTaskTxt" placeholder="O que vamos fazer hoje?" autocomplete="off">
+                        <button class="enviar" onclick="adicionar()" id="btnAdd"> 
+                            <svg class="icon-btn" width="30" height="30" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.6378 34.9922V0.588776H21.4432V34.9922H13.6378ZM0.338778 21.6932V13.8878H34.7422V21.6932H0.338778Z" fill="white"/>
+                                </svg>
+                                <div class="btn-info" id="btnInfo">
+                                    <p id="add"> Adicionar </p>
+                                </div>
+                        </button>
                         
+                    </div>
+
+                    <div class="list-task-size" id="areaTask" onclick="closeWindow()"> 
+
+                        <div class="no-task-size-container" id="nothingTaskDiv">
+                            <div class="no-task-size" > 
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <p class="task-off" id="noTask"> Nenhuma tarefa disponível. </p>
+                                    <button class="off" onclick="autoInput()" id="createTask">
+                                        Criar tarefa
+                                    </button>
+                                
+                                </div>
                         </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>   
     <script src="./js/script.js"></script>
     <noscript> Para o site funcionar corretamente, por favor habilite o JavaScript em seu navegador.</noscript>

@@ -47,8 +47,50 @@ body{ display: flex; }
 }
 
 
+body{
+    display: flex;
+}
 
 
+
+
+@media screen and (max-width: 930px) {
+    header{
+        display: none;
+    }
+
+    .window-welcome-container{
+        display: none;
+    }
+
+    .icons-size{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+    .info-size-container{
+        flex-direction:column-reverse;
+    }
+
+    main .info-size-container .f-column{
+        width: 100%;
+
+        text-align: center;
+    }   
+
+    main .info-size-container .s-column{
+        justify-content: center;
+    }   
+
+    .content-size-max{
+        width: 100%;
+        height: calc(100% - 300px);
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+}
 
 
 
@@ -180,7 +222,6 @@ border-bottom: 3px solid #1e8bc2;
 /* >>>>>>>>>>>>>>> 2ª Parte - Header (CABEÇALHO) <<<<<<<<<<<<<<< */
 header {
     width: 320px;
-    height: 100vh;
     padding: 30px 15px;
     position: relative;
 }
@@ -360,6 +401,7 @@ main {
     background: linear-gradient(150deg, rgba(31,156,148,1) 0%, rgba(146,11,149,1) 100%);
     width: 100%;
     height: 100vh;
+    max-height: 100vh;
     padding: 30px 40px 40px 40px;
     display: flex;
     flex-direction: column;
@@ -398,7 +440,6 @@ main .info-size-container .f-column .date{
 
 main .info-size-container .s-column{
     display: flex;
-    justify-content: end;
     gap: 15px;
 }
 
@@ -1014,13 +1055,21 @@ main .check p.time-task{
 
 
 /* Div da lista de tarefas (Aqui que fica todas as tarefas) */
-main .list-task-size{
+.list-task-size{
     width: 100%;
-    height: 670px;
     display: flex;
+    height: calc(100% - 80px);
+    max-height:100%;
     flex-direction: column;
     overflow-y: hidden;
     overflow-y: scroll;
+}
+
+.content-size-max{
+    width: 100%;
+    height: calc(100% - 120px);
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 main .list-task-size .no-task-size-container{
