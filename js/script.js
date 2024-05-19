@@ -143,8 +143,26 @@ var btnContinue = window.document.getElementById('btnContinue')
 )
 // >>>>>>>>>>>>>>> Função de apertar a tecla ENTER já adicionar a tarefa.
 
+document.addEventListener("keyup", function(event){
+    var colorWindow = window.document.getElementById('colorWindow');
+    var languageWindow = window.document.getElementById('languageWindow');
+        if(event.keyCode === 27) {
+        event.preventDefault();
+        colorWindow.style.visibility="hidden";
+        languageWindow.style.visibility="hidden";
+        }
+    }
+    )
 
 
+
+
+function closeWindow(){
+    var colorWindow = window.document.getElementById('colorWindow');
+    var languageWindow = window.document.getElementById('languageWindow');
+    colorWindow.style.visibility="hidden";
+    languageWindow.style.visibility="hidden";
+}
 
 
 // >>>>>>>>>>>>>>> Função de remover uma tarefa.
