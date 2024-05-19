@@ -378,11 +378,11 @@ main .line-decoration{
 main .info-size-container{
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 main .info-size-container .f-column{
     color: #FFF;
-    width: 50%;
 }
 
 main .info-size-container .f-column h2{
@@ -397,7 +397,6 @@ main .info-size-container .f-column .date{
 }
 
 main .info-size-container .s-column{
-    width: 50%;
     display: flex;
     justify-content: end;
     gap: 15px;
@@ -846,7 +845,7 @@ main .btn-info{
 
 /* Tarefas Escritas (DEFAULT) */
 main .task-container-size{
-    width: 100%;
+    width: calc(100% - 10px);
     height: 60px;
     background-color: #ffffff49;
     border-radius: 5px;
@@ -945,7 +944,7 @@ main .task-container-size .t-column:hover .info-trash{
 }
 
 main .task-container-content .task-line-decoration{
-    width: 100%;
+    width: calc(100% - 10px);
     height: 5px;
     background-color: #ffffff49;
     border-radius: 5px;
@@ -1016,11 +1015,11 @@ main .check p.time-task{
 
 /* Div da lista de tarefas (Aqui que fica todas as tarefas) */
 main .list-task-size{
-    height: 100%;
     width: 100%;
+    height: 670px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: hidden;
     overflow-y: scroll;
 }
 
@@ -1066,15 +1065,16 @@ main .list-task-size .no-task-size button.off:hover{
 }
 
 main .list-task-size::-webkit-scrollbar{
-    width: 1px;
+    width: 5px;
     background-color: #ce010100;
-    border-radius: 10px;
-    margin-left: 20px;
     z-index: 1;
 }
 
 main .list-task-size::-webkit-scrollbar-thumb{
-    background-color: #b6050500;
+    background-color: #ffffff49;
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
     z-index: 1;
 }
 /* Div da lista de tarefas (Aqui que fica todas as tarefas) */

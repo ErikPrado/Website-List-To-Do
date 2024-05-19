@@ -81,18 +81,15 @@ function adicionar(){
 
     function addZero(x){ return x < 10 ? '0' + x : '' + x; };
     let hoursMinutes = addZero(hours) + ":" + addZero(minutes);
-    
-    
+
 
     ++contador;
-    
 
- 
     contTask.innerHTML = `${contador}`;
 
     if ((taskTxt !== "") && (taskTxt !== null) && (taskTxt !== undefined)){
     var novaTask = `
-    <div class="task-container-content" id=${contador}>
+    <div class="task-container-content" id=${contador} onclick="closeWindow()">
 
                 <div class="task-line-decoration"></div>
     <div class="task-container-size" onclick="ativar(${contador})">
@@ -118,13 +115,13 @@ function adicionar(){
     `
 
 
+
     nothingTask.style.display='none';
     listTask.innerHTML +=  novaTask    
     
     inputTaskTxt.value = "";
     inputTaskTxt.focus();
     }
-
 }
 // >>>>>>>>>>>>>>> Função de Adicionar uma tarefa.
 
@@ -143,6 +140,11 @@ var btnContinue = window.document.getElementById('btnContinue')
 )
 // >>>>>>>>>>>>>>> Função de apertar a tecla ENTER já adicionar a tarefa.
 
+
+
+
+
+// >>>>>>>>>>>>>>> Função de apertar a tecla ESC fechar a janela de cor e linguagem.
 document.addEventListener("keyup", function(event){
     var colorWindow = window.document.getElementById('colorWindow');
     var languageWindow = window.document.getElementById('languageWindow');
@@ -153,6 +155,9 @@ document.addEventListener("keyup", function(event){
         }
     }
     )
+// >>>>>>>>>>>>>>> Função de apertar a tecla ESC fechar a janela de cor e linguagem.
+
+
 
 
 
@@ -184,8 +189,6 @@ function del(id){
 // >>>>>>>>>>>>>>> Função de marcar uma tarefa como pronta.
 function ativar(id){
     var item = document.getElementById(id);
-
-
     item.classList.toggle('check');
     item.parentNode.appendChild(item);
 }
